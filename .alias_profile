@@ -1,0 +1,2 @@
+alias lg='lazygit'
+alias update='sh ~/Config/update.sh'

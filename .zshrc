@@ -1,0 +1,1 @@
+/Users/oo00spy00oo/.zshrc
