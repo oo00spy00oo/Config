@@ -40,6 +40,9 @@ colorize:
 kube-linter:
 	GO111MODULE=on go get golang.stackrox.io/kube-linter/cmd/kube-linter
 
+gitmoj:
+	yarn global add gitmoji-cli
+
 awscli:
 	curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
 	sudo installer -pkg AWSCLIV2.pkg -target /
