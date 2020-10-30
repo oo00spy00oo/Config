@@ -74,7 +74,8 @@ brew install \
     tesseract \
     grpcurl \
     perl \
-    eksctl
+    eksctl \
+    krew
 
 # ytt kpt kapp
 
