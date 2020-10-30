@@ -4,6 +4,8 @@ all: homebrew
 
 version-manager: nvm gvm
 
+symlink: symlink-profile zshrc
+
 homebrew:
 	./scripts/homebrew.sh
 
@@ -13,15 +15,14 @@ sdkman:
 kubernetes:
 	./scripts/kubernetes.sh
 
-symlink:
+symlink-profile:
 	cd && \
 	ln -s -f Config/.alias_profile && \
 	ln -s -f Config/.bash_profile
 
 zshrc:
 	# Symlink for ZSH
-	cd
-	ln -s -f Config/.zshrc
+	cd && ln -s -f Config/.zshrc
 
 oh-my-tmux:
 	# https://github.com/gpakosz/.tmux
