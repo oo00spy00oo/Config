@@ -73,7 +73,8 @@ brew install \
     vault \
     tesseract \
     grpcurl \
-    perl
+    perl \
+    eksctl
 
 # ytt kpt kapp
 

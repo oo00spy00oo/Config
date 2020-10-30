@@ -12,6 +12,9 @@ symlink:
 	ln -s /Users/oo00spy00oo/Config/.alias_profile /Users/oo00spy00oo/ &
 	ln -s /Users/oo00spy00oo/Config/.bash_profile /Users/oo00spy00oo/ &
 	ln -s /Users/oo00spy00oo/Config/.env_profile /Users/oo00spy00oo/ &
+	# ZSH
+	cd
+	ln -s -f Config/.zshrc
 
 prezto-contrib:
 	# https://github.com/belak/prezto-contrib#usage
