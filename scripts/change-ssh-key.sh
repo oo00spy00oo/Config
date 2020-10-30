@@ -14,7 +14,7 @@ if [ -f "$CANDIATE_PRIVATE_KEY" ] && [ -f "$CANDIATE_PUBLIC_KEY" ]; then
     # Create the new one with argument
     cp $CANDIATE_PRIVATE_KEY $PRIVATE_KEY
     cp $CANDIATE_PUBLIC_KEY $PUBLIC_KEY
-    
+
     echo "$1 key changed!"
 
     exit 0
