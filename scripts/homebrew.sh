@@ -76,7 +76,6 @@ brew install \
     perl \
     eksctl \
     krew
-
 # ytt kpt kapp
 
 # Homebrew cask
@@ -90,6 +89,10 @@ brew cask install \
     brave-browser \
     lastpass \
     discord
+
+# Language version manager
+brew install \
+    pyenv
 
 # Git toolbelt
 brew tap nvie/tap
