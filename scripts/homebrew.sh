@@ -41,7 +41,9 @@ brew install \
     tesseract \
     tesseract-lang \
     grpcurl \
-    perl
+    perl \
+    git \
+    git-gui
 
 # ytt kpt kapp
 
