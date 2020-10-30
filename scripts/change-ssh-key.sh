@@ -17,6 +17,9 @@ if [ -f "$CANDIATE_PRIVATE_KEY" ] && [ -f "$CANDIATE_PUBLIC_KEY" ]; then
 
     echo "$1 key changed!"
 
+    ssh-add
+    echo "ssh-add updated!"
+
     exit 0
 else
     echo "$1 key not exists!"
