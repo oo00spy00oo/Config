@@ -2,19 +2,32 @@ all: homebrew
 
 .PHONY: homebrew
 
+version-manager: nvm gvm
+
 homebrew:
 	./scripts/homebrew.sh
 
 sdkman:
 	./scripts/sdkman.sh
 
+kubernetes:
+	./scripts/kubernetes.sh
+
 symlink:
-	ln -s /Users/oo00spy00oo/Config/.alias_profile /Users/oo00spy00oo/ &
-	ln -s /Users/oo00spy00oo/Config/.bash_profile /Users/oo00spy00oo/ &
-	ln -s /Users/oo00spy00oo/Config/.env_profile /Users/oo00spy00oo/ &
-	# ZSH
+	cd && \
+	ln -s -f Config/.alias_profile && \
+	ln -s -f Config/.bash_profile
+
+zshrc:
+	# Symlink for ZSH
 	cd
 	ln -s -f Config/.zshrc
+
+oh-my-tmux:
+	# https://github.com/gpakosz/.tmux
+	cd
+	ln -s -f Config/.tmux/.tmux.conf
+	ln -s -f Config/.tmux/.tmux.conf.local
 
 prezto-contrib:
 	# https://github.com/belak/prezto-contrib#usage
