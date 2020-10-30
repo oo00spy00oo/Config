@@ -1,2 +1,8 @@
 alias lg='lazygit'
-alias update='sh ~/Config/update.sh'
+alias update='sh ~/Config/scripts/update.sh'
+
+alias ssh-personal='sh ~/Config/scripts/change-ssh-key.sh personal'
+alias ssh-credify='sh ~/Config/scripts/change-ssh-key.sh credify'
+
+# Cheat.sh
+alias cht.sh='sh ~/Config/scripts/cht.sh'
