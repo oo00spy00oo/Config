@@ -78,7 +78,8 @@ brew install \
     tektoncd-cli \
     teleconsole \
     velero \
-    packer \
+    packer
+
 brew cask install \
     fly
 # Git toolbelt
