@@ -19,6 +19,7 @@ brew install \
     vagrant \
     vagrant-manager \
     ansible \
+    ansible-lint \
     ripgrep \
     another-redis-desktop-manager \
     telnet \
@@ -54,7 +55,24 @@ brew install \
     docker-compose \
     mpv \
     asciinema \
-    croc
+    croc \
+    aws-iam-authenticator \
+    ffmpeg \
+    fontconfig \
+    cocoapods \
+    glow \
+    imageoptim-cli \
+    jmeter \
+    kompose \
+    parallel \
+    packer \
+    sqlite \
+    terragrunt \
+    velero \
+    wrk \
+    vault \
+    tesseract \
+    grpcurl
 
 # ytt kpt kapp
 
@@ -67,11 +85,16 @@ brew cask install \
     microsoft-edge \
     vivaldi \
     brave-browser \
-    lastpass
+    lastpass \
+    discord
 
 # Git toolbelt
 brew tap nvie/tap
 brew install nvie/tap/git-toolbelt
+
+# Telepresence
+brew cask install osxfuse
+brew install datawire/blackbird/telepresence
 
 # Homebrew Fonts
 brew tap homebrew/cask-fonts
@@ -80,3 +103,4 @@ brew cask install font-fira-code \
 
 # Refernce:
 # https://github.com/nvbn/thefuck
+# https://github.com/chubin/cheat.sh
