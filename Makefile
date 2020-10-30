@@ -36,6 +36,7 @@ prezto-contrib:
 
 gvm:
 	# Install Go version manager (gvm)
+	xcode-select --install
 	brew install mercurial
 	bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 
