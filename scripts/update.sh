@@ -15,3 +15,6 @@ zprezto-update
 
 # nvm upgrade
 nvm upgrade
+
+# Update .oh-my-tmux
+cd ~/.tmux && git pull
