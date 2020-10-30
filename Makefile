@@ -27,6 +27,9 @@ zshrc:
 
 oh-my-tmux:
 	# https://github.com/gpakosz/.tmux
+	git submodule update --init --recursive
+	git submodule sync
+
 	cd && \
 	ln -s -f Config/.tmux/.tmux.conf && \
 	ln -s -f Config/.tmux/.tmux.conf.local
