@@ -36,4 +36,13 @@ colorize:
 	# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colorize
 	# https://github.com/alecthomas/chroma
 	go get -u github.com/alecthomas/chroma/cmd/chroma
-	
+
+kube-linter:
+	GO111MODULE=on go get golang.stackrox.io/kube-linter/cmd/kube-linter
+
+awscli:
+	curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+	sudo installer -pkg AWSCLIV2.pkg -target /
+	rm -rf AWSCLIV2.pkg
+	which aws
+	aws --version
