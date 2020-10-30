@@ -34,4 +34,4 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 export FZF_DEFAULT_COMMAND='fd --type f --color=always --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'
 
-[[ -s "/Users/oo00spy00oo/.gvm/scripts/gvm" ]] && source "/Users/oo00spy00oo/.gvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
