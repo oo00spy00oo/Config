@@ -5,72 +5,77 @@
 brew install \
     jq \
     bit-git \
-    docker-credential-helper \
     fd \
     lazygit \
     fzf \
     peco \
-    kubectl \
-    terraform \
     fzy \
     thefuck \
     neovim \
-    vagrant \
-    ansible \
-    ansible-lint \
     ripgrep \
     telnet \
     tmux \
-    k9s \
     httpie \
     you-get \
-    dive \
     gh \
-    earthly \
     bat \
     bats \
     exa \
     htop \
-    minikube \
-    kustomize \
-    kops \
-    stern \
-    skaffold \
-    buildpacks/tap/pack \
-    tektoncd-cli \
-    teleconsole \
     yarn \
     yq \
-    buildkit \
     gradle \
-    helm \
     infer \
-    kubectx \
-    docker-machine \
-    docker-compose \
     mpv \
     asciinema \
     croc \
-    aws-iam-authenticator \
     ffmpeg \
     fontconfig \
     cocoapods \
     glow \
     imageoptim-cli \
-    kompose \
     parallel \
-    packer \
     sqlite \
-    terragrunt \
-    velero \
     wrk \
     vault \
     tesseract \
+    tesseract-lang \
     grpcurl \
-    perl \
-    eksctl \
-    krew
+    perl
+
 # ytt kpt kapp
+
+# DevOps
+brew install \
+    aws-iam-authenticator \
+    docker-credential-helper \
+    eksctl \
+    krew \
+    kompose \
+    ansible \
+    ansible-lint \
+    vagrant \
+    dive \
+    kustomize \
+    minikube \
+    kubectx \
+    docker-machine \
+    docker-compose \
+    helm \
+    kubectl \
+    terraform \
+    terragrunt \
+    k9s \
+    buildkit \
+    kops \
+    stern \
+    skaffold \
+    earthly \
+    buildpacks/tap/pack \
+    tektoncd-cli \
+    teleconsole \
+    velero \
+    packer \
 
 # Homebrew cask
 brew cask install \
