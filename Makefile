@@ -15,6 +15,7 @@ sdkman:
 kubernetes:
 	./scripts/kubernetes.sh
 
+# Symlink
 symlink-profile:
 	cd && \
 	ln -s -f Config/.alias_profile && \
@@ -35,6 +36,7 @@ prezto-contrib:
 	cd ${ZPREZTODIR}
 	git clone --recurse-submodules https://github.com/belak/prezto-contrib contrib
 
+# Version manager
 gvm:
 	# Install Go version manager (gvm)
 	xcode-select --install
@@ -44,11 +46,12 @@ gvm:
 nvm:
 	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 
+# Language
 go:
 	# https://medium.com/@jimkang/install-go-on-mac-with-homebrew-5fa421fc55f5
 	brew install golang
 	mkdir -p $HOME/go/{bin,src,pkg}
-	# Setup env (in .env.profile)
+	# Setup env (in .bash_profile)
 
 colorize:
 	# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colorize
