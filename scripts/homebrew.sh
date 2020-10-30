@@ -5,7 +5,6 @@
 brew install \
     jq \
     bit-git \
-    visual-studio-code \
     docker-credential-helper \
     fd \
     lazygit \
@@ -17,11 +16,9 @@ brew install \
     thefuck \
     neovim \
     vagrant \
-    vagrant-manager \
     ansible \
     ansible-lint \
     ripgrep \
-    another-redis-desktop-manager \
     telnet \
     tmux \
     k9s \
@@ -34,9 +31,7 @@ brew install \
     bats \
     exa \
     htop \
-    bloomrpc \
     minikube \
-    virtualbox \
     kustomize \
     kops \
     stern \
@@ -62,7 +57,6 @@ brew install \
     cocoapods \
     glow \
     imageoptim-cli \
-    jmeter \
     kompose \
     parallel \
     packer \
@@ -80,23 +74,11 @@ brew install \
 
 # Homebrew cask
 brew cask install \
-    fly \
-    github \
-    authy \
-    google-chrome \
-    microsoft-edge \
-    vivaldi \
-    brave-browser \
-    lastpass \
-    discord
+    fly
 
 # Language version manager
 brew install \
     pyenv
-
-# Git toolbelt
-brew tap nvie/tap
-brew install nvie/tap/git-toolbelt
 
 # Telepresence
 brew cask install osxfuse
@@ -106,6 +88,28 @@ brew install datawire/blackbird/telepresence
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code \
     font-cascadia-code-pl
+
+# Git toolbelt
+brew tap nvie/tap
+brew install nvie/tap/git-toolbelt
+
+# Desktop Application
+brew cask install \
+    github \
+    authy \
+    google-chrome \
+    microsoft-edge \
+    vivaldi \
+    brave-browser \
+    lastpass \
+    discord
+brew install \
+    another-redis-desktop-manager \
+    vagrant-manager \
+    bloomrpc \
+    virtualbox \
+    jmeter \
+    visual-studio-code
 
 # Refernce:
 # https://github.com/nvbn/thefuck
