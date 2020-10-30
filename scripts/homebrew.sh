@@ -45,6 +45,7 @@ brew install \
 
 # ytt kpt kapp
 
+#-------------------------------
 # DevOps
 brew install \
     aws-iam-authenticator \
@@ -76,27 +77,24 @@ brew install \
     teleconsole \
     velero \
     packer \
-
-# Homebrew cask
 brew cask install \
     fly
+# Git toolbelt
+brew tap nvie/tap
+brew install nvie/tap/git-toolbelt
+# Telepresence
+brew cask install osxfuse
+brew install datawire/blackbird/telepresence
+#-------------------------------
 
 # Language version manager
 brew install \
     pyenv
 
-# Telepresence
-brew cask install osxfuse
-brew install datawire/blackbird/telepresence
-
 # Homebrew Fonts
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code \
     font-cascadia-code-pl
-
-# Git toolbelt
-brew tap nvie/tap
-brew install nvie/tap/git-toolbelt
 
 # Desktop Application
 brew cask install \
