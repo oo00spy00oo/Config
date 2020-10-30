@@ -17,4 +17,4 @@ zprezto-update
 nvm upgrade
 
 # Update .oh-my-tmux
-cd ~/.tmux && git pull
+cd ~/Config/.tmux && bit sync
