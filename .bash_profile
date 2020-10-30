@@ -22,6 +22,11 @@ export PATH="/usr/local/opt/ncurses/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ncurses/lib"
 export CPPFLAGS="-I/usr/local/opt/ncurses/include"
 
+# Golang
+export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
 # BuildPacks
 . $(pack completion --shell zsh)
 
