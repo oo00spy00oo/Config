@@ -3,10 +3,10 @@ all: homebrew
 .PHONY: homebrew
 
 homebrew:
-	./homebrew.sh
+	./scripts/homebrew.sh
 
 sdkman:
-	./sdkman.sh
+	./scripts/sdkman.sh
 
 symlink:
 	ln -s /Users/oo00spy00oo/Config/.alias_profile /Users/oo00spy00oo/ &
