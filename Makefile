@@ -39,7 +39,7 @@ gvm:
 	# Install Go version manager (gvm)
 	xcode-select --install
 	brew install mercurial
-	bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+	curl -sSL https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer | bash
 
 nvm:
 	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
