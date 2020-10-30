@@ -4,7 +4,7 @@ all: homebrew
 
 version-manager: nvm gvm
 
-symlink: symlink-profile zshrc
+symlink: symlink-profile zshrc oh-my-tmux
 
 homebrew:
 	./scripts/homebrew.sh
@@ -26,8 +26,8 @@ zshrc:
 
 oh-my-tmux:
 	# https://github.com/gpakosz/.tmux
-	cd
-	ln -s -f Config/.tmux/.tmux.conf
+	cd && \
+	ln -s -f Config/.tmux/.tmux.conf && \
 	ln -s -f Config/.tmux/.tmux.conf.local
 
 prezto-contrib:
