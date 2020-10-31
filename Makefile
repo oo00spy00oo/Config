@@ -2,9 +2,12 @@ all: homebrew
 
 .PHONY: homebrew
 
+patch:
+	./scripts/patch
+
 version-manager: nvm gvm
 
-symlink: symlink-profile zshrc oh-my-tmux
+symlink: profile-symlink zshrc-symlink oh-my-tmux-symlink nvim-symlink
 
 homebrew:
 	./scripts/homebrew.sh
@@ -16,16 +19,16 @@ kubernetes:
 	./scripts/kubernetes.sh
 
 # Symlink
-symlink-profile:
+profile-symlink:
 	cd && \
 	ln -s -f Config/.alias_profile && \
 	ln -s -f Config/.bash_profile
 
-zshrc:
+zshrc-symlink:
 	# Symlink for ZSH
 	cd && ln -s -f Config/.zshrc
 
-oh-my-tmux:
+oh-my-tmux-symlink:
 	# https://github.com/gpakosz/.tmux
 	git submodule update --init --recursive
 	git submodule sync
@@ -33,6 +36,11 @@ oh-my-tmux:
 	cd && \
 	ln -s -f Config/.tmux/.tmux.conf && \
 	ln -s -f Config/.tmux/.tmux.conf.local
+
+nvim-symlink:
+	cd ~/.config/nvim && \
+		ln -s -f $HOME/Config/.config/nvim/configs && \
+		ln -s -f $HOME/Config/.config/nvim/init.vim
 
 prezto-contrib:
 	# https://github.com/belak/prezto-contrib#usage
