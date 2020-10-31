@@ -3,6 +3,9 @@
 #To use fzf in Vim, add the following line to your .vimrc:
 #  set rtp+=/usr/local/opt/fzf
 brew install \
+    cmake \
+    macvim \
+    mono \
     jq \
     bit-git \
     fd \
@@ -45,7 +48,8 @@ brew install \
     git \
     git-gui \
     reattach-to-user-namespace \
-    fpp
+    fpp \
+    luarocks
 
 # ytt kpt kapp
 
@@ -100,6 +104,10 @@ brew install \
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code \
     font-cascadia-code-pl
+
+# Patch font for NERD
+# https://github.com/ryanoasis/nerd-font
+brew cask install font-hack-nerd-font
 
 # Desktop Application
 brew cask install \
