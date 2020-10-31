@@ -203,4 +203,4 @@ autoload -U +X bashcompinit && bashcompinit
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/oo00spy00oo/.sdkman"
-[[ -s "/Users/oo00spy00oo/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/oo00spy00oo/.sdkman/bin/sdkman-init.sh"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
