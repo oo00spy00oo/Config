@@ -43,7 +43,9 @@ brew install \
     grpcurl \
     perl \
     git \
-    git-gui
+    git-gui \
+    reattach-to-user-namespace \
+    fpp
 
 # ytt kpt kapp
 
@@ -108,7 +110,8 @@ brew cask install \
     vivaldi \
     brave-browser \
     lastpass \
-    discord
+    discord \
+    visual-paradigm-ce
 brew install \
     another-redis-desktop-manager \
     vagrant-manager \
