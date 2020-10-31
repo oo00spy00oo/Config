@@ -173,9 +173,11 @@ zinit wait lucid for \
 zinit for \
     light-mode  zsh-users/zsh-syntax-highlighting \
     light-mode  zsh-users/zsh-history-substring-search \
+    light-mode  marzocchi/zsh-notify \
     light-mode  zdharma/zshelldoc \
     light-mode  zdharma/zui \
     light-mode  zdharma/zzcomplete \
+    light-mode  zdharma/zconvey \
     light-mode  zdharma/fast-syntax-highlighting \
                 zdharma/history-search-multi-word
 
