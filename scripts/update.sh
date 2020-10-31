@@ -10,6 +10,10 @@ brew cleanup
 sdk update
 sdk upgrade
 
+### NeoVim
+nvim --headless +PlugUpdate +qall
+nvim --headless +PlugUpgrade +qall
+
 ### Prezto
 zprezto-update
 
