@@ -11,6 +11,10 @@ export EDITOR="$VISUAL"
 # Docker BUILDKIT
 export DOCKER_BUILDKIT=1
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
 # ZSH colorize
 export ZSH_COLORIZE_TOOL=chroma
 export ZSH_COLORIZE_STYLE="colorful"
@@ -34,4 +38,5 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 export FZF_DEFAULT_COMMAND='fd --type f --color=always --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'
 
+# gvm
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"

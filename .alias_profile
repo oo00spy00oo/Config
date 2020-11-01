@@ -1,8 +1,11 @@
-alias lg='lazygit'
-alias update='sh ~/Config/scripts/update.sh'
-
-alias ssh-personal='sh ~/Config/scripts/change-ssh-key.sh personal'
-alias ssh-credify='sh ~/Config/scripts/change-ssh-key.sh credify'
+# SK Commands
+alias sk-install='python ~/Config/scripts/install.py'
+alias sk-update='sh ~/Config/scripts/update.py'
 
 # Cheat.sh
 alias cht.sh='sh ~/Config/scripts/cht.sh'
+
+alias lg='lazygit'
+
+alias ssh-personal='sh ~/Config/scripts/change-ssh-key.sh personal'
+alias ssh-credify='sh ~/Config/scripts/change-ssh-key.sh credify'

@@ -6,3 +6,7 @@
 pip3 install pynvim
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --all
+
+# Patch font for NERD
+# https://github.com/ryanoasis/nerd-font
+brew cask install font-hack-nerd-font
