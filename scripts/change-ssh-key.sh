@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 CANDIATE_PRIVATE_KEY=~/.ssh/id_rsa_$1
 CANDIATE_PUBLIC_KEY=$CANDIATE_PRIVATE_KEY.pub
