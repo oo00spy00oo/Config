@@ -13,31 +13,39 @@ console.print("3. [magenta]pip[/]")
 console.print("4. [magenta]node[/]")
 console.print("4. [magenta]Kubernetes Plugins[/]")
 
+prefix_cmd = "cd $HOME/Config/scripts/install && "
+
 def install_homebrew():
     console.print()
     console.print("Installing [bold red]Homebrew[/]...")
-    os.system("cd install && python homebrew.py")
+    cmd = prefix_cmd + "python homebrew.py"
+    os.system(cmd)
 
 def install_sdkman():
     console.print()
     console.print("Installing [bold red]SDK Man[/]...")
-    sdkman_thread = subprocess.Popen(["sh", "install/sdkman.sh"])
-    sdkman_thread.wait()
+    cmd = prefix_cmd + "sdkman.sh"
+    os.system(cmd)
+    # sdkman_thread = subprocess.Popen(["sh", "install/sdkman.sh"])
+    # sdkman_thread.wait()
 
 def install_pip():
     console.print()
     console.print("Installing [bold red]pip[/] packages...")
-    os.system("install/pip.sh")
+    cmd = prefix_cmd + "pip.sh"
+    os.system(cmd)
 
 def install_node():
     console.print()
     console.print("Installing [bold red]Node[/] packages...")
-    os.system("install/node.sh")
+    cmd = prefix_cmd + "node.sh"
+    os.system(cmd)
 
 def install_kubernetes_plugins():
     console.print()
     console.print("Installing [bold red]Kubernetes Plugins[/]...")
-    os.system("install/kubernetes.sh")
+    cmd = prefix_cmd + "kubernetes.sh"
+    os.system(cmd)
 
 choice = console.input("What is your [bold red]choice[/]? :smiley: ")
 console.print(f'You entered {choice}')
