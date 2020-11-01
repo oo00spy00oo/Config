@@ -1,5 +1,5 @@
 # SK Commands
-alias sk-install='python ~/Config/scripts/install.py'
+alias sk-install='cd ~/Config && make install'
 alias sk-update='sh ~/Config/scripts/update.py'
 
 # Cheat.sh

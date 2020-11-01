@@ -5,6 +5,9 @@ all: homebrew
 patch:
 	./scripts/patch
 
+install:
+	python scripts/install.py
+
 version-manager: nvm gvm
 
 symlink: profile-symlink zshrc-symlink oh-my-tmux-symlink nvim-symlink
