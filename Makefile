@@ -2,15 +2,18 @@ all: homebrew
 
 .PHONY: homebrew
 
-patch:
-	./scripts/patch
-
 install:
 	python scripts/install.py
 
-version-manager: nvm gvm
+update:
+	python scripts/update.py
+
+patch:
+	python scripts/patch.py
 
 symlink: profile-symlink zshrc-symlink oh-my-tmux-symlink nvim-symlink
+
+version-manager: nvm gvm
 
 homebrew:
 	./scripts/homebrew.sh
@@ -41,6 +44,7 @@ oh-my-tmux-symlink:
 	ln -s -f Config/.tmux/.tmux.conf.local
 
 nvim-symlink:
+	mkdir -p $HOME/.config/nvim
 	cd ~/.config/nvim && \
 		ln -s -f $HOME/Config/.config/nvim/configs && \
 		ln -s -f $HOME/Config/.config/nvim/init.vim

@@ -21,49 +21,49 @@ prefix_cmd = "cd $HOME/Config/scripts/update && "
 def update_homebrew():
     console.print()
     console.print("updateing [bold red]Homebrew[/]...")
-    cmd = prefix_cmd + "homebrew.sh"
+    cmd = prefix_cmd + "./homebrew.sh"
     os.system(cmd)
 
 def update_sdkman():
     console.print()
     console.print("updateing [bold red]SDK Man[/]...")
-    cmd = prefix_cmd + "sdkman.sh"
+    cmd = prefix_cmd + "./sdkman.sh"
     os.system(cmd)
 
 def update_yarn():
     console.print()
     console.print("updateing [bold red]Yarn[/] packages...")
-    cmd = prefix_cmd + "yarn.sh"
+    cmd = prefix_cmd + "./yarn.sh"
     os.system(cmd)
 
 def update_neovim():
     console.print()
     console.print("updateing [bold red]NeoVim[/] plugins...")
-    cmd = prefix_cmd + "neovim.sh"
+    cmd = prefix_cmd + "./neovim.sh"
     os.system(cmd)
 
 def update_zinit():
     console.print()
     console.print("updateing [bold red]zinit[/]...")
-    cmd = prefix_cmd + "zinit.sh"
+    cmd = prefix_cmd + "./zinit.sh"
     os.system(cmd)
 
 def update_nvm():
     console.print()
     console.print("updateing [bold red]nvm[/]...")
-    cmd = prefix_cmd + "nvm.sh"
+    cmd = prefix_cmd + "./nvm.sh"
     os.system(cmd)
 
 def update_tmux():
     console.print()
     console.print("updateing [bold red]oh-my-tmux[/]...")
-    cmd = prefix_cmd + "oh-my-tmux.sh"
+    cmd = prefix_cmd + "./oh-my-tmux.sh"
     os.system(cmd)
 
 def update_prezto():
     console.print()
     console.print("updateing [bold red]prezto[/]...")
-    cmd = prefix_cmd + "prezto.sh"
+    cmd = prefix_cmd + "./prezto.sh"
     os.system(cmd)
 
 # def update_pip():

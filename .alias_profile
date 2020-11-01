@@ -1,6 +1,8 @@
 # SK Commands
 alias sk-install='cd ~/Config && make install'
-alias sk-update='sh ~/Config/scripts/update.py'
+alias sk-update='cd ~/Config && make update'
+alias sk-patch='cd ~/Config && make patch'
+alias sk-symlink='cd ~/Config && make symlink'
 
 # Cheat.sh
 alias cht.sh='sh ~/Config/scripts/cht.sh'

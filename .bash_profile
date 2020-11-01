@@ -38,5 +38,12 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 export FZF_DEFAULT_COMMAND='fd --type f --color=always --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'
 
+### Fixing install python with pyenv
+### Package: YouCompleteMe
+# You must use a Python compiled with the --enable-framework flag. If using pyenv, you need to run the command:
+# export PYTHON_CONFIGURE_OPTS="--enable-framework"
+# before installing a Python version
+export PYTHON_CONFIGURE_OPTS="--enable-framework"
+
 # gvm
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
