@@ -16,46 +16,55 @@ console.print("6. [magenta]nvm[/]")
 console.print("7. [magenta]oh-my-tmux[/]")
 console.print("8. [magenta]Prezto[/]")
 
+prefix_cmd = "cd $HOME/Config/scripts/update && "
+
 def update_homebrew():
     console.print()
     console.print("updateing [bold red]Homebrew[/]...")
-    os.system("./homebrew.sh")
+    cmd = prefix_cmd + "homebrew.sh"
+    os.system(cmd)
 
 def update_sdkman():
     console.print()
     console.print("updateing [bold red]SDK Man[/]...")
-    sdkman_thread = subprocess.Popen(["sh", "update/sdkman.sh"])
-    sdkman_thread.wait()
+    cmd = prefix_cmd + "sdkman.sh"
+    os.system(cmd)
 
 def update_yarn():
     console.print()
     console.print("updateing [bold red]Yarn[/] packages...")
-    os.system("update/yarn.sh")
+    cmd = prefix_cmd + "yarn.sh"
+    os.system(cmd)
 
 def update_neovim():
     console.print()
     console.print("updateing [bold red]NeoVim[/] plugins...")
-    os.system("update/neovim.sh")
+    cmd = prefix_cmd + "neovim.sh"
+    os.system(cmd)
 
 def update_zinit():
     console.print()
     console.print("updateing [bold red]zinit[/]...")
-    os.system("update/zinit.sh")
+    cmd = prefix_cmd + "zinit.sh"
+    os.system(cmd)
 
 def update_nvm():
     console.print()
     console.print("updateing [bold red]nvm[/]...")
-    os.system("update/nvm.sh")
+    cmd = prefix_cmd + "nvm.sh"
+    os.system(cmd)
 
 def update_tmux():
     console.print()
     console.print("updateing [bold red]oh-my-tmux[/]...")
-    os.system("update/oh-my-tmux.sh")
+    cmd = prefix_cmd + "oh-my-tmux.sh"
+    os.system(cmd)
 
 def update_prezto():
     console.print()
     console.print("updateing [bold red]prezto[/]...")
-    os.system("update/prezto.sh")
+    cmd = prefix_cmd + "prezto.sh"
+    os.system(cmd)
 
 # def update_pip():
 #     console.print()
