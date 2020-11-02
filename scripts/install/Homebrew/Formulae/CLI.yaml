@@ -96,3 +96,10 @@
   code: luarocks
 - name: ""
   code: pyenv
+- name: Git toolbelt
+  code: nvie/tap/git-toolbelt
+  tap: nvie/tap
+- name: Telepresence
+  code: datawire/blackbird/telepresence
+  depends:
+    - formulae: osxfuse
