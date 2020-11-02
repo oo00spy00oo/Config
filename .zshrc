@@ -202,7 +202,7 @@ eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 
 # Source profiles
 source ~/.bash_profile
-source ~/.alias_profile
+source ~/.bash_aliases
 source ~/.local_profile
 
 autoload -U +X bashcompinit && bashcompinit
