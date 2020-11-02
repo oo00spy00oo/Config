@@ -1,0 +1,22 @@
+- name: "Github"
+  code: github
+- name: "Authy"
+  code: authy
+- name: "Google Chrome"
+  code: google-chrome
+- name: "Microsoft Edge"
+  code: microsoft-edge
+- name: "Vivaldi Browser"
+  code: vivaldi
+- name: "Brave Browser"
+  code: brave-browser
+- name: "Lasspass"
+  code: lastpass
+- name: "Discord"
+  code: discord
+- name: "Visual Paradigm CE"
+  code: visual-paradigm-ce
+- name: "DBEaver Community Edittion"
+  code: dbeaver-community
+- name: "PgAdmin 4"
+  code: pgadmin4
