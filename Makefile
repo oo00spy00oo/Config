@@ -27,7 +27,7 @@ kubernetes:
 # Symlink
 profile-symlink:
 	cd && \
-	ln -s -f Config/.alias_profile && \
+	ln -s -f Config/.bash_aliases && \
 	ln -s -f Config/.bash_profile
 
 zshrc-symlink:
