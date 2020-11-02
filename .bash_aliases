@@ -7,6 +7,7 @@ alias sk-symlink='cd ~/Config && make symlink'
 # Cheat.sh
 alias cht.sh='sh ~/Config/scripts/cht.sh'
 
+# Lazygit
 alias lg='lazygit'
 
 alias ssh-personal='sh ~/Config/scripts/change-ssh-key.sh personal'
