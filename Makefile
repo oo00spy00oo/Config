@@ -46,8 +46,8 @@ oh-my-tmux-symlink:
 nvim-symlink:
 	mkdir -p $HOME/.config/nvim
 	cd ~/.config/nvim && \
-		ln -s -f $HOME/Config/.config/nvim/configs && \
-		ln -s -f $HOME/Config/.config/nvim/init.vim
+		ln -s -f ${HOME}/Config/.config/nvim/configs && \
+		ln -s -f ${HOME}/Config/.config/nvim/init.vim
 
 prezto-contrib:
 	# https://github.com/belak/prezto-contrib#usage

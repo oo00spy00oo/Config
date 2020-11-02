@@ -1,0 +1,12 @@
+- name: "Another Redis Desktop Manager"
+  code: another-redis-desktop-manager
+- name: "Vagrant Manager"
+  code: vagrant-manager
+- name: "BloomRPC"
+  code: bloomrpc
+- name: "Virtualbox"
+  code: virtualbox
+- name: "Jmeter"
+  code: jmeter
+- name: "Visual Studio Code"
+  code: visual-studio-code
