@@ -1,6 +1,10 @@
 class Command:
-    NAME="name"
-    CODE="code"
+    NAME = "name"
+    CODE = "code"
+    TAP = "tap"
+    DEPENDS = "depends"
+    FOMULAE = "formulae"
+    CASK = "cask"
 
     BREW_CMD = "brew install"
     BREW_CASK_CMD = "brew cask install"
