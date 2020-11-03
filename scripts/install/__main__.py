@@ -60,11 +60,11 @@ def install_sdkman():
     # sdkman_thread.wait()
 
 def install_version_manager():
-    version_manager = "Version-Manager/"
-    console.print("Installing [bold red]pyenv[/]...")
-    os.system(install_location + version_manager + "pyenv.sh")
-    console.print("Installing [bold red]rbenv[/]...")
-    os.system(install_location + version_manager + "rbenv.sh")
+    # console.print("Installing [bold red]pyenv[/]...")
+    # os.system(install_location + version_manager + "pyenv.sh")
+    # console.print("Installing [bold red]rbenv[/]...")
+    # os.system(install_location + version_manager + "rbenv.sh")
+    os.system("python " + install_location + "Version-Manager/vm.py")
 
 def install_pip():
     console.print()
