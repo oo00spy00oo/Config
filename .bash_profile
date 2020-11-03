@@ -32,7 +32,7 @@ export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 # BuildPacks
-. $(pack completion --shell zsh)
+[ -f /usr/local/bin/pack ] && . $(pack completion --shell zsh)
 
 # FZF config
 export FZF_DEFAULT_COMMAND='fd --type f --color=always --hidden --follow --exclude .git'
