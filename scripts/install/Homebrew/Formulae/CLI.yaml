@@ -96,3 +96,5 @@
   code: luarocks
 - name: ""
   code: pyenv
+- name: ""
+  code: wget
