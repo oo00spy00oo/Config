@@ -20,3 +20,5 @@
   code: dbeaver-community
 - name: "PgAdmin 4"
   code: pgadmin4
+- name: "TextMate"
+  code: textmate
