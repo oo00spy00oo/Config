@@ -98,3 +98,5 @@
   code: pyenv
 - name: ""
   code: wget
+- code: tmuxinator
+- code: autojump
