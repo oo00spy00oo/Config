@@ -44,7 +44,7 @@ oh-my-tmux-symlink:
 	ln -s -f Config/.tmux/.tmux.conf.local
 
 nvim-symlink:
-	mkdir -p $HOME/.config/nvim
+	mkdir -p ${HOME}/.config/nvim
 	cd ~/.config/nvim && \
 		ln -s -f ${HOME}/Config/.config/nvim/configs && \
 		ln -s -f ${HOME}/Config/.config/nvim/init.vim
