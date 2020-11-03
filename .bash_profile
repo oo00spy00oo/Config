@@ -26,11 +26,6 @@ export PATH="/usr/local/opt/ncurses/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ncurses/lib"
 export CPPFLAGS="-I/usr/local/opt/ncurses/include"
 
-# Golang
-export GOPATH=$HOME/go
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-
 # BuildPacks
 [ -f /usr/local/bin/pack ] && . $(pack completion --shell zsh)
 
@@ -47,3 +42,8 @@ export PYTHON_CONFIGURE_OPTS="--enable-framework"
 
 # gvm
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+# Golang
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOBIN}:${GOROOT}/bin"
