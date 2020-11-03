@@ -3,10 +3,13 @@ from rich.markdown import Markdown
 import os
 import subprocess
 from libs.homebrew import Homebrew
+from libs.pip import Pip
 from libs.location import Location
+from pathlib import Path
 
 console = Console()
 homebrew = Homebrew()
+pip = Pip()
 location = Location()
 
 with open("README.md") as readme:
@@ -17,11 +20,14 @@ console.rule("Install package from?")
 console.print("0. [magenta]All[/]")
 console.print("1. [magenta]Homebrew[/]")
 console.print("2. [magenta]SDK Man[/]")
-console.print("3. [magenta]pip[/]")
-console.print("4. [magenta]node[/]")
+console.print("3. [magenta]Version Manager[/]")
 console.print("4. [magenta]Kubernetes Plugins[/]")
+console.print("5. [magenta]pip[/]")
+console.print("6. [magenta]node[/]")
 
+home = str(Path.home())
 prefix_cmd = "cd $HOME/Config/scripts/install && "
+install_location = home + "/" + location.INSTALL_LOCATION + "/"
 
 def install_homebrew():
     console.print("Installing [bold red]CLI Tools[/] from [bold magenta]Homebrew[/]...")
@@ -53,11 +59,17 @@ def install_sdkman():
     # sdkman_thread = subprocess.Popen(["sh", "install/sdkman.sh"])
     # sdkman_thread.wait()
 
+def install_version_manager():
+    version_manager = "Version-Manager/"
+    console.print("Installing [bold red]pyenv[/]...")
+    os.system(install_location + version_manager + "pyenv.sh")
+    console.print("Installing [bold red]rbenv[/]...")
+    os.system(install_location + version_manager + "rbenv.sh")
+
 def install_pip():
     console.print()
     console.print("Installing [bold red]pip[/] packages...")
-    cmd = prefix_cmd + "pip.sh"
-    os.system(cmd)
+    pip.exec_single(location.PIP + location.PIP_FILE)
 
 def install_node():
     console.print()
@@ -78,16 +90,19 @@ choice = int(choice)
 if choice == 0:
     install_homebrew()
     install_sdkman()
+    install_version_manager()
+    install_kubernetes_plugins()
     install_pip()
     install_node()
-    install_kubernetes_plugins()
 elif choice == 1:
     install_homebrew()
 elif choice == 2:
     install_sdkman()
 elif choice == 3:
-    install_pip()
+    install_version_manager()
 elif choice == 4:
-    install_node()
-elif choice == 5:
     install_kubernetes_plugins()
+elif choice == 5:
+    install_pip()
+elif choice == 6:
+    install_node()

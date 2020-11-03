@@ -1,0 +1,4 @@
+- code: jupyterlab
+- code: pyyaml
+- code: rich
+- code: pip

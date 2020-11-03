@@ -11,3 +11,4 @@ class Command:
     BREW_TAP_CMD = "brew tap"
 
     PIP_CMD = "pip install"
+    PIP_UPGRADE_CMD = "pip install --upgrade"

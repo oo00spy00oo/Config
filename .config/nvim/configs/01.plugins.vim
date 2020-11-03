@@ -75,6 +75,8 @@ Plug 'dense-analysis/ale'
 Plug 'nsf/gocode', { 'rtp': 'vim' }
 " Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Earthfile syntax highlighting for vim
+Plug 'earthly/earthly.vim', { 'branch': 'main' }
 
 Plug 'ekalinin/dockerfile.vim'
 Plug 'stanangeloff/php.vim'
