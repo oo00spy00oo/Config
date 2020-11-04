@@ -24,24 +24,24 @@ class Install:
 
         self.console.print("Installing [bold red]CLI Tools[/] from [bold magenta]Homebrew[/]...")
         brew.exec_multiple(self.utils.absolute_location(self.location.HOMEBREW_FORMULAE + self.location.CLI_FILE))
-        brew.exec_multiple(self.utils.absolute_location(self.location.HOMEBREW_CASK + self.location.CLI_FILE, True))
+        brew.exec_multiple(self.utils.absolute_location(self.location.HOMEBREW_CASK + self.location.CLI_FILE), True)
 
         self.console.print("Installing [bold red]DevOps Tools[/] from [bold magenta]Homebrew[/]...")
         brew.exec_multiple(self.utils.absolute_location(self.location.HOMEBREW_FORMULAE + self.location.DEVOPS_TOOLS_FILE))
-        brew.exec_multiple(self.utils.absolute_location(self.location.HOMEBREW_CASK + self.location.DEVOPS_TOOLS_FILE, True))
+        brew.exec_multiple(self.utils.absolute_location(self.location.HOMEBREW_CASK + self.location.DEVOPS_TOOLS_FILE),True)
 
         self.console.print("Installing [bold red]DevOps Tools[/] from [bold magenta]Homebrew[/]...")
         brew.exec_multiple(self.utils.absolute_location(self.location.HOMEBREW_FORMULAE + self.location.DEVOPS_TOOLS_FILE))
-        brew.exec_multiple(self.utils.absolute_location(self.location.HOMEBREW_CASK + self.location.DEVOPS_TOOLS_FILE, True))
+        brew.exec_multiple(self.utils.absolute_location(self.location.HOMEBREW_CASK + self.location.DEVOPS_TOOLS_FILE), True)
 
         self.console.print("Installing [bold red]Desktop Application[/] from [bold magenta]Homebrew[/]...")
         brew.exec_single(self.utils.absolute_location(self.location.HOMEBREW_FORMULAE + self.location.DESKTOP_APPICATION_FILE))
-        brew.exec_single(self.utils.absolute_location(self.location.HOMEBREW_CASK + self.location.DESKTOP_APPICATION_FILE, True))
+        brew.exec_single(self.utils.absolute_location(self.location.HOMEBREW_CASK + self.location.DESKTOP_APPICATION_FILE), True)
 
         self.console.print("Installing [bold red]Font[/] from [bold magenta]Homebrew[/]...")
         brew.tap("self.homebrew/cask-fonts")
         brew.exec_multiple(self.utils.absolute_location(self.location.HOMEBREW_FORMULAE + self.location.FONT_FILE))
-        brew.exec_multiple(self.utils.absolute_location(self.location.HOMEBREW_CASK + self.location.FONT_FILE, True))
+        brew.exec_multiple(self.utils.absolute_location(self.location.HOMEBREW_CASK + self.location.FONT_FILE), True)
 
     def sdkman(self):
         self.console.print()
