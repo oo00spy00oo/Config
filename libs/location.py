@@ -1,9 +1,9 @@
 class Location:
-    HOMEBREW_FORMULAE = "groups/Homebrew/Formulae/"
-    HOMEBREW_CASK = "groups/Homebrew/Cask/"
-    PIP = "groups/Python/"
-    NODE = "groups/Node/"
-    KUBERNETES = "groups/Kubernetes/"
+    HOMEBREW_FORMULAE = "/zsh-config/groups/Homebrew/Formulae/"
+    HOMEBREW_CASK = "/zsh-config/groups/Homebrew/Cask/"
+    PIP = "/zsh-config/groups/Python/"
+    NODE = "/zsh-config/groups/Node/"
+    KUBERNETES = "/zsh-config/groups/Kubernetes/"
 
     DESKTOP_APPICATION_FILE = "Desktop-Application.yaml"
     DEVOPS_TOOLS_FILE="DevOps.yaml"

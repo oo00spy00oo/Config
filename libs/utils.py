@@ -1,6 +1,7 @@
 from rich.console import Console
 import os
 import yaml
+from pathlib import Path
 
 class Utils:
 
@@ -24,3 +25,7 @@ class Utils:
     def tasks_print(self, tasks):
         for task in tasks:
             self.console.print(str(task) + ". [magenta]" + tasks[task] + "[/]")
+
+    def absolute_location(self, loc):
+        self.home = str(Path.home())
+        return self.home + loc
