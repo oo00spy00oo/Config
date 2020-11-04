@@ -1,1 +1,14 @@
+- code: warp
+- code: sshd
+- code: whoami
+- code: images
+- code: konfig
+- code: view-cert
+- code: oidc-login
+- code: cert-manager
+- code: modify-secret
+- code: ingress-nginx
+- code: access-matrix
+- code: unused-volumes
 - code: apparmor-manager
+- code: resource-snapshot
