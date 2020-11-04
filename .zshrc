@@ -116,6 +116,32 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+#-----------------------
+# Autocomplete section
+# BEGIN
+# Kubectl
+if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
+# Fly CLI
+if [ $commands[fly] ]; then source <(fly completion --shell zsh); fi
+# Terraform
+if [ $commands[terraform] ]; then complete -o nospace -C /usr/local/bin/terraform terraform; fi
+# nvm (Node version manager)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# pip
+eval $(pip3 completion --zsh)
+# pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+# rbenv
+if command -v rbenv 1>/dev/null 2>&1; then
+  eval "$(rbenv init -)"
+fi
+# END
+#-----------------------
+
 # Prezto
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
@@ -177,32 +203,6 @@ zinit pack for fzf
 
 # Perl
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
-
-#-----------------------
-# Autocomplete section
-# BEGIN
-# Kubectl
-if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
-# Fly CLI
-if [ $commands[fly] ]; then source <(fly completion --shell zsh); fi
-# Terraform
-if [ $commands[terraform] ]; then complete -o nospace -C /usr/local/bin/terraform terraform; fi
-# nvm (Node version manager)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# pip
-eval $(pip3 completion --zsh)
-# pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-# rbenv
-if command -v rbenv 1>/dev/null 2>&1; then
-  eval "$(rbenv init -)"
-fi
-# END
-#-----------------------
 
 # Source profiles
 source ~/.bash_profile
