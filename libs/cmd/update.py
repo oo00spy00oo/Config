@@ -65,6 +65,12 @@ class Update:
         cmd = self.prefix_cmd + "prezto.sh"
         os.system(cmd)
 
+    def flutter(self):
+        self.console.print()
+        self.console.print("Updating [bold red]Flutter[/]...")
+        cmd = self.prefix_cmd + "flutter.sh"
+        os.system(cmd)
+
     def run(self):
         tasks = {
             0: "All",
@@ -77,6 +83,7 @@ class Update:
             7: "nvm",
             8: "oh-my-tmux",
             9: "Prezto",
+            10: "Flutter"
         }
 
         self.console.rule("Update package from?")
@@ -96,6 +103,7 @@ class Update:
             self.nvm()
             self.tmux()
             self.prezto()
+            self.flutter()
         elif choice == 1:
             self.homebrew()
         elif choice == 2:
@@ -114,3 +122,5 @@ class Update:
             self.tmux()
         elif choice == 9:
             self.prezto()
+        elif choice == 10:
+            self.flutter()
