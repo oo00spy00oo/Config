@@ -39,7 +39,7 @@ class Install:
         brew.exec_single(self.utils.absolute_location(self.location.HOMEBREW_CASK + self.location.DESKTOP_APPICATION_FILE), True)
 
         self.console.print("Installing [bold red]Font[/] from [bold magenta]Homebrew[/]...")
-        brew.tap("self.homebrew/cask-fonts")
+        brew.tap("homebrew/cask-fonts")
         brew.exec_multiple(self.utils.absolute_location(self.location.HOMEBREW_FORMULAE + self.location.FONT_FILE))
         brew.exec_multiple(self.utils.absolute_location(self.location.HOMEBREW_CASK + self.location.FONT_FILE), True)
 
