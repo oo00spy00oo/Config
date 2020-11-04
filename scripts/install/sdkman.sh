@@ -2,7 +2,7 @@
 
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-input="$(pwd)/groups/SDK-Man/packages.txt"
+input="${HOME}/zsh-config/groups/SDK-Man/packages.txt"
 while IFS= read -r line
 do
   echo "Installing $line ..."
