@@ -1,9 +1,9 @@
 class Location:
-    HOMEBREW_FORMULAE = "/zsh-config/groups/Homebrew/Formulae/"
-    HOMEBREW_CASK = "/zsh-config/groups/Homebrew/Cask/"
-    PIP = "/zsh-config/groups/Python/"
-    NODE = "/zsh-config/groups/Node/"
-    KUBERNETES = "/zsh-config/groups/Kubernetes/"
+    HOMEBREW_FORMULAE = "/.config/zsh-config/groups/Homebrew/Formulae/"
+    HOMEBREW_CASK = "/.config/zsh-config/groups/Homebrew/Cask/"
+    PIP = "/.config/zsh-config/groups/Python/"
+    NODE = "/.config/zsh-config/groups/Node/"
+    KUBERNETES = "/.config/zsh-config/groups/Kubernetes/"
 
     DESKTOP_APPICATION_FILE = "Desktop-Application.yaml"
     DEVOPS_TOOLS_FILE="DevOps.yaml"
@@ -13,7 +13,7 @@ class Location:
     YARN_FILE="Yarn.yaml"
     KREW_FILE="Krew.yaml"
 
-    INSTALL_LOCATION="zsh-config/scripts/install/"
-    UPDATE_LOCATION="zsh-config/scripts/update/"
-    PATCH_LOCATION="zsh-config/scripts/patch/"
-    GROUP_LOCATION="zsh-config/groups/"
+    INSTALL_LOCATION=".config/zsh-config/scripts/install/"
+    UPDATE_LOCATION=".config/zsh-config/scripts/update/"
+    PATCH_LOCATION=".config/zsh-config/scripts/patch/"
+    GROUP_LOCATION=".config/zsh-config/groups/"

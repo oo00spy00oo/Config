@@ -11,7 +11,7 @@ class VersionManager:
         self.utils = Utils()
 
         self.home = str(Path.home())
-        self.version_manager_loc = "sh $HOME/zsh-config/groups/Version-Manager/"
+        self.version_manager_loc = "sh $HOME/.config/zsh-config/groups/Version-Manager/"
 
     def pyenv(self):
         self.console.print()

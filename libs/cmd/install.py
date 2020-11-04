@@ -17,7 +17,7 @@ class Install:
         self.location = Location()
         self.utils = Utils()
 
-        self.prefix_cmd = "sh $HOME/" + self.location.GROUP_LOCATION
+        self.prefix_cmd = "sh $HOME/" + self.location.INSTALL_LOCATION
 
     def homebrew(self):
         brew = Homebrew()
@@ -46,7 +46,7 @@ class Install:
     def sdkman(self):
         self.console.print()
         self.console.print("Installing [bold red]SDK Man[/] packages..")
-        cmd = "sh $HOME/zsh-config/scripts/install/sdkman.sh"
+        cmd = self.prefix_cmd + "sdkman.sh"
         os.system(cmd)
         # sdkman_thread = subprocess.Popen(["sh", "install/sdkman.sh"])
         # sdkman_thread.wait()
@@ -74,12 +74,13 @@ class Install:
         self.console.print("Installing [bold red]Kubernetes Plugins[/]...")
         kubernetes.krew(self.utils.absolute_location(self.location.KUBERNETES + self.location.KREW_FILE))
 
-    def run(self):
-        # markdown = Markdown()
-        # with open("../README.md") as readme:
-        #     markdown = Markdown(readme.read())
-        # self.console.print(markdown)
+    def awscli(self):
+        self.console.print()
+        self.console.print("Installing [bold red]Kubernetes Plugins[/]...")
+        cmd = self.prefix_cmd + "awscli.sh"
+        os.system(cmd)
 
+    def run(self):
         tasks = {
             0: "All",
             1: "Homebrew",
@@ -88,6 +89,7 @@ class Install:
             4: "Kubernetes Plugins",
             5: "pip",
             6: "node",
+            7: "awscli"
         }
 
         self.console.rule("Install package from?")
@@ -104,6 +106,7 @@ class Install:
             self.kubernetes_plugins()
             self.pip()
             self.node()
+            self.awscli()
         elif choice == 1:
             self.homebrew()
         elif choice == 2:
@@ -116,3 +119,5 @@ class Install:
             self.pip()
         elif choice == 6:
             self.node()
+        elif choice == 7:
+            self.awscli()

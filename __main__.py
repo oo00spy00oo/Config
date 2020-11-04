@@ -1,4 +1,6 @@
 import click
+from rich.console import Console
+from rich.markdown import Markdown
 from libs.cmd.install import Install
 from libs.cmd.update import Update
 from libs.cmd.patch import Patch
@@ -9,6 +11,12 @@ def cli():
 
 @click.command()
 def install():
+    console = Console()
+
+    with open("README.md") as readme:
+        markdown = Markdown(readme.read())
+    console.print(markdown)
+
     install = Install()
     install.run()
 

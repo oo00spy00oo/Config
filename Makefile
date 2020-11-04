@@ -1,38 +1,18 @@
 all: homebrew
 
-.PHONY: homebrew
-
-install:
-	python scripts/install.py
-
-update:
-	python scripts/update.py
-
-patch:
-	python scripts/patch.py
+.PHONY: symlink
 
 symlink: profile-symlink zshrc-symlink oh-my-tmux-symlink nvim-symlink
-
-version-manager: nvm gvm
-
-homebrew:
-	./scripts/homebrew.sh
-
-sdkman:
-	./scripts/sdkman.sh
-
-kubernetes:
-	./scripts/kubernetes.sh
 
 # Symlink
 profile-symlink:
 	cd && \
-	ln -s -f zsh-config/.bash_aliases && \
-	ln -s -f zsh-config/.bash_profile
+		ln -s -f .config/zsh-config/.bash_aliases && \
+		ln -s -f .config/zsh-config/.bash_profile
 
 zshrc-symlink:
 	# Symlink for ZSH
-	cd && ln -s -f zsh-config/.zshrc
+	cd && ln -s -f .config/zsh-config/.zshrc
 
 oh-my-tmux-symlink:
 	# https://github.com/gpakosz/.tmux
@@ -40,29 +20,19 @@ oh-my-tmux-symlink:
 	git submodule sync
 
 	cd && \
-	ln -s -f zsh-config/.tmux/.tmux.conf && \
-	ln -s -f zsh-config/.tmux/.tmux.conf.local
+		ln -s -f .config/zsh-config/.tmux/.tmux.conf && \
+		ln -s -f .config/zsh-config/.tmux/.tmux.conf.local
 
 nvim-symlink:
 	mkdir -p ${HOME}/.config/nvim
 	cd ~/.config/nvim && \
-		ln -s -f ${HOME}/zsh-config/.config/nvim/configs && \
-		ln -s -f ${HOME}/zsh-config/.config/nvim/init.vim
+		ln -s -f ${HOME}/.config/zsh-config/.config/nvim/configs && \
+		ln -s -f ${HOME}/.config/zsh-config/.config/nvim/init.vim
 
 prezto-contrib:
 	# https://github.com/belak/prezto-contrib#usage
 	cd ${ZPREZTODIR}
 	git clone --recurse-submodules https://github.com/belak/prezto-contrib contrib
-
-# Version manager
-gvm:
-	# Install Go version manager (gvm)
-	xcode-select --install
-	brew install mercurial
-	curl -sSL https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer | bash
-
-nvm:
-	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 
 # Language
 go:
@@ -78,9 +48,6 @@ colorize:
 
 kube-linter:
 	GO111MODULE=on go get golang.stackrox.io/kube-linter/cmd/kube-linter
-
-gitmoj:
-	yarn global add gitmoji-cli
 
 awscli:
 	curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
