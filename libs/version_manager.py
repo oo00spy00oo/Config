@@ -29,12 +29,18 @@ class VersionManager:
         self.console.print("Installing [bold red]SDK Man[/]...")
         os.system(self.version_manager_loc + "sdkman.sh")
 
+    def gvm(self):
+        self.console.print()
+        self.console.print("Installing [bold red]gvm[/]...")
+        os.system(self.version_manager_loc + "gvm.sh")
+
     def run(self):
         tasks = {
             0: "All",
             1: "pyenv",
             2: "rbenv",
             3: "sdkman",
+            4: "gvm",
         }
 
         self.console.rule("Install package from?")
@@ -54,3 +60,5 @@ class VersionManager:
             self.rbenv()
         elif choice == 3:
             self.sdkman()
+        elif choice == 4:
+            self.gvm()
