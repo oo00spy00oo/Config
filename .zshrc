@@ -209,6 +209,10 @@ source ~/.bash_profile
 source ~/.bash_aliases
 source ~/.local_profile
 
+# Add iterm2 shell integration
+# https://iterm2.com/documentation-shell-integration.html
+source ~/.iterm2_shell_integration.zsh
+
 autoload -U +X bashcompinit && bashcompinit
 
 # Auto jump
