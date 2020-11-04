@@ -12,3 +12,8 @@ class Command:
 
     PIP_CMD = "pip install"
     PIP_UPGRADE_CMD = "pip install --upgrade"
+
+    KREW_CMD = "kubectl krew install"
+    KREW_UPGRADE_CMD = "kubectl krew upgrade"
+
+    YARN_CMD = "yarn global add"

@@ -29,6 +29,9 @@ export CPPFLAGS="-I/usr/local/opt/ncurses/include"
 # BuildPacks
 [ -f /usr/local/bin/pack ] && . $(pack completion --shell zsh)
 
+# Krew
+export PATH="${PATH}:${HOME}/.krew/bin"
+
 # FZF config
 export FZF_DEFAULT_COMMAND='fd --type f --color=always --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'

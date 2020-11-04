@@ -1,4 +1,7 @@
 import click
+from libs.cmd.install import Install
+from libs.cmd.update import Update
+from libs.cmd.patch import Patch
 
 @click.command()
 @click.option("--count", default=1, help="Number of greetings.")
@@ -13,15 +16,23 @@ def cli():
     pass
 
 @click.command()
-def initdb():
-    click.echo('Initialized the database')
+def install():
+    install = Install()
+    install.run()
 
 @click.command()
-def dropdb():
-    click.echo('Dropped the database')
+def update():
+    update = Update()
+    update.run()
 
-cli.add_command(initdb)
-cli.add_command(dropdb)
+@click.command()
+def patch():
+    patch = Patch()
+    patch.run()
+
+cli.add_command(install)
+cli.add_command(update)
+cli.add_command(patch)
 
 if __name__ == '__main__':
     cli()

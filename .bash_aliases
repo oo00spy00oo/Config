@@ -1,14 +1,13 @@
 # SK Commands
-alias sk-install='cd ~/Config && make install'
-alias sk-update='cd ~/Config && make update'
-alias sk-patch='cd ~/Config && make patch'
-alias sk-symlink='cd ~/Config && make symlink'
+alias zsh-config='python ~/zsh-config'
+alias sk-symlink='cd ~/zsh-config && make symlink'
+
+# Personal Key
+alias ssh-personal='sh ~/zsh-config/scripts/change-ssh-key.sh personal'
+alias ssh-credify='sh ~/zsh-config/scripts/change-ssh-key.sh credify'
 
 # Cheat.sh
-alias cht.sh='sh ~/Config/scripts/cht.sh'
+alias cht.sh='sh ~/zsh-config/scripts/cht.sh'
 
 # Lazygit
 alias lg='lazygit'
-
-alias ssh-personal='sh ~/Config/scripts/change-ssh-key.sh personal'
-alias ssh-credify='sh ~/Config/scripts/change-ssh-key.sh credify'

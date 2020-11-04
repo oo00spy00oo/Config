@@ -2,4 +2,4 @@
 
 # Update .oh-my-tmux
 echo "Updating oh-my-tmux..."
-cd $HOME/Config && git submodule update
+cd $HOME/zsh-config && git submodule update

@@ -1,12 +1,11 @@
 from rich.console import Console
 import os
 import yaml
-from libs.command import Command
-
-console = Console()
-command = Command()
 
 class Utils:
+
+    def __init__(self):
+        self.console = Console()
 
     def shell_command(self, prefix, package):
         cmd = prefix + " " + package
@@ -21,3 +20,7 @@ class Utils:
 
     def exec_multiple(self, cmd, packages):
         self.shell_command(cmd, packages)
+
+    def tasks_print(self, tasks):
+        for task in tasks:
+            self.console.print(str(task) + ". [magenta]" + tasks[task] + "[/]")

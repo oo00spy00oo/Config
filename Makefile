@@ -27,12 +27,12 @@ kubernetes:
 # Symlink
 profile-symlink:
 	cd && \
-	ln -s -f Config/.bash_aliases && \
-	ln -s -f Config/.bash_profile
+	ln -s -f zsh-config/.bash_aliases && \
+	ln -s -f zsh-config/.bash_profile
 
 zshrc-symlink:
 	# Symlink for ZSH
-	cd && ln -s -f Config/.zshrc
+	cd && ln -s -f zsh-config/.zshrc
 
 oh-my-tmux-symlink:
 	# https://github.com/gpakosz/.tmux
@@ -40,14 +40,14 @@ oh-my-tmux-symlink:
 	git submodule sync
 
 	cd && \
-	ln -s -f Config/.tmux/.tmux.conf && \
-	ln -s -f Config/.tmux/.tmux.conf.local
+	ln -s -f zsh-config/.tmux/.tmux.conf && \
+	ln -s -f zsh-config/.tmux/.tmux.conf.local
 
 nvim-symlink:
 	mkdir -p ${HOME}/.config/nvim
 	cd ~/.config/nvim && \
-		ln -s -f ${HOME}/Config/.config/nvim/configs && \
-		ln -s -f ${HOME}/Config/.config/nvim/init.vim
+		ln -s -f ${HOME}/zsh-config/.config/nvim/configs && \
+		ln -s -f ${HOME}/zsh-config/.config/nvim/init.vim
 
 prezto-contrib:
 	# https://github.com/belak/prezto-contrib#usage

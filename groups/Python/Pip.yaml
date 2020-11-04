@@ -2,3 +2,4 @@
 - code: pyyaml
 - code: rich
 - code: pip
+- code: click
