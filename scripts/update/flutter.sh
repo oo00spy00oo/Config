@@ -2,4 +2,6 @@
 
 ### Homebrew
 echo "Updating Flutter..."
-cd $HOME/development/flutter && git pull
+if [ $commands[flutter] ]; then
+    cd $HOME/development/flutter && git pull
+fi
