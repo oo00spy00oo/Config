@@ -50,3 +50,6 @@ export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOBIN}:${GOROOT}/bin"
+
+# Flutter
+export PATH="$PATH:$HOME/development/flutter/bin"
