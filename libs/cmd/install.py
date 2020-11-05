@@ -80,6 +80,12 @@ class Install:
         cmd = self.prefix_cmd + "awscli.sh"
         os.system(cmd)
 
+    def gopass(self):
+        self.console.print()
+        self.console.print("Installing [bold red]Kubernetes Plugins[/]...")
+        cmd = self.prefix_cmd + "awscli.sh"
+        os.system(cmd)
+
     def run(self):
         tasks = {
             0: "All",
@@ -89,7 +95,8 @@ class Install:
             4: "Kubernetes Plugins",
             5: "pip",
             6: "node",
-            7: "awscli"
+            7: "awscli",
+            8: "gopass",
         }
 
         self.console.rule("Install package from?")
@@ -107,6 +114,7 @@ class Install:
             self.pip()
             self.node()
             self.awscli()
+            self.gopass()
         elif choice == 1:
             self.homebrew()
         elif choice == 2:
@@ -121,3 +129,5 @@ class Install:
             self.node()
         elif choice == 7:
             self.awscli()
+        elif choice == 8:
+            self.gopass()
