@@ -8,7 +8,8 @@ symlink: profile-symlink zshrc-symlink oh-my-tmux-symlink nvim-symlink
 profile-symlink:
 	cd && \
 		ln -s -f .config/zsh-config/.bash_aliases && \
-		ln -s -f .config/zsh-config/.bash_profile
+		ln -s -f .config/zsh-config/.bash_profile && \
+		ln -s -f .config/zsh-config/.kb_alias
 
 zshrc-symlink:
 	# Symlink for ZSH

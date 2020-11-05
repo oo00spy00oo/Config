@@ -208,6 +208,7 @@ eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 source ~/.bash_profile
 source ~/.bash_aliases
 source ~/.local_profile
+source ~/.kb_alias
 
 # Add iterm2 shell integration
 # https://iterm2.com/documentation-shell-integration.html
