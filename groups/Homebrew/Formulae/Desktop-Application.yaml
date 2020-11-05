@@ -12,5 +12,3 @@
   code: visual-studio-code
 - name: "Emacs"
   code: emacs
-- name: "Wireshark"
-  code: wireshark

@@ -28,3 +28,5 @@
   code: spectacle
 - name: "Free Download Manager"
   code: free-download-manager
+- name: "Wireshark"
+  code: wireshark

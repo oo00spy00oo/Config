@@ -54,6 +54,7 @@
 - code: transmission-cli
 - code: ccat
 - code: tldr
+- code: wireshark
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap
