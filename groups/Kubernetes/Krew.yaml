@@ -1,5 +1,6 @@
 - code: warp
 - code: sshd
+- code: sniff
 - code: whoami
 - code: images
 - code: konfig
