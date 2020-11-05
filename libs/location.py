@@ -4,6 +4,7 @@ class Location:
     PIP = "/.config/zsh-config/groups/Python/"
     NODE = "/.config/zsh-config/groups/Node/"
     KUBERNETES = "/.config/zsh-config/groups/Kubernetes/"
+    GITHUB = "/.config/zsh-config/groups/Github/"
 
     DESKTOP_APPICATION_FILE = "Desktop-Application.yaml"
     DEVOPS_TOOLS_FILE="DevOps.yaml"
@@ -12,6 +13,7 @@ class Location:
     PIP_FILE="Pip.yaml"
     YARN_FILE="Yarn.yaml"
     KREW_FILE="Krew.yaml"
+    REPOSITORIES_FILE="Repositories.yaml"
 
     INSTALL_LOCATION=".config/zsh-config/scripts/install/"
     UPDATE_LOCATION=".config/zsh-config/scripts/update/"
