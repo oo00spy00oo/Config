@@ -1,6 +1,7 @@
 import click
 from rich.console import Console
 from rich.markdown import Markdown
+from pathlib import Path
 from libs.cmd.install import Install
 from libs.cmd.update import Update
 from libs.cmd.patch import Patch
@@ -14,7 +15,8 @@ def cli():
 def install():
     console = Console()
 
-    with open("README.md") as readme:
+    home = str(Path.home())
+    with open(home + "/.config/zsh-config/README.md") as readme:
         markdown = Markdown(readme.read())
     console.print(markdown)
 
