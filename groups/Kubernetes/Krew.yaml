@@ -4,6 +4,7 @@
 - code: whoami
 - code: images
 - code: konfig
+- code: capture
 - code: view-cert
 - code: oidc-login
 - code: cert-manager
@@ -11,5 +12,6 @@
 - code: ingress-nginx
 - code: access-matrix
 - code: unused-volumes
+- code: config-cleanup
 - code: apparmor-manager
 - code: resource-snapshot
