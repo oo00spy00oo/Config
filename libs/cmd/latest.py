@@ -22,8 +22,8 @@ class Latest:
             r = requests.get('https://api.github.com/repos/' + code + "/releases/latest")
             response = r.json()
 
-            self.console.print("[magenta]URL[/]: [bold red]" + response["html_url"] + "[/]")
-            self.console.print("[magenta]Tag[/]: [bold red]" + response["tag_name"] + "[/]")
-            self.console.print("[magenta]Publish date[/]: [bold red]" + response["published_at"] + "[/]")
-            self.console.print("[magenta]Release name[/]: [bold red]" + response["name"] + "[/]")
-            self.console.print("[magenta]Prerelease[/]: [bold red]" + str(response["prerelease"]) + "[/]")
+            self.console.print("[green]URL[/]: [bold magenta]" + response["html_url"] + "[/]")
+            self.console.print("[green]Tag[/]: [bold magenta]" + response["tag_name"] + "[/]")
+            self.console.print("[green]Publish date[/]: [bold magenta]" + response["published_at"] + "[/]")
+            self.console.print("[green]Release name[/]: [bold magenta]" + response["name"] + "[/]")
+            self.console.print("[green]Prerelease[/]: [bold magenta]" + str(response["prerelease"]) + "[/]")
