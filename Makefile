@@ -50,9 +50,6 @@ colorize:
 kube-linter:
 	GO111MODULE=on go get golang.stackrox.io/kube-linter/cmd/kube-linter
 
-awscli:
-	curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
-	sudo installer -pkg AWSCLIV2.pkg -target /
-	rm -rf AWSCLIV2.pkg
-	which aws
-	aws --version
+tmuxinator-completion:
+	# https://github.com/tmuxinator/tmuxinator
+	wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh -O /usr/local/share/zsh/site-functions/_tmuxinator
