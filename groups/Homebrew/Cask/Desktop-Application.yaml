@@ -22,3 +22,7 @@
   code: pgadmin4
 - name: "TextMate"
   code: textmate
+- name: "Keeweb"
+  code: keeweb
+- name: "Spectacle"
+  code: spectacle
