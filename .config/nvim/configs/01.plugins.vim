@@ -26,6 +26,8 @@ Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
 " Vim plugin that displays tags in a window, ordered by scope
 Plug 'majutsushi/tagbar'
+" tldr client for vim/neovim
+Plug 'wlemuel/vim-tldr'
 
 Plug 'tpope/vim-sensible'
 " Plug '/usr/local/opt/fzf'

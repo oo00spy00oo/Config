@@ -10,3 +10,5 @@
   code: jmeter
 - name: "Visual Studio Code"
   code: visual-studio-code
+- name: "Emacs"
+  code: emacs

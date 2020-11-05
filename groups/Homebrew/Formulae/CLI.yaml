@@ -52,6 +52,8 @@
 - code: autojump
 - code: unzip
 - code: transmission-cli
+- code: ccat
+- code: tldr
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap

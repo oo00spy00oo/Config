@@ -11,7 +11,7 @@ class Command:
     BREW_TAP_CMD = "brew tap"
 
     PIP_CMD = "pip install"
-    PIP_UPGRADE_CMD = "pip install --upgrade"
+    PIP_UPGRADE_CMD = "pip install -U"
 
     KREW_CMD = "kubectl krew install"
     KREW_UPGRADE_CMD = "kubectl krew upgrade"

@@ -2,6 +2,7 @@ from rich.console import Console
 import os
 from libs.location import Location
 from libs.utils import Utils
+from libs.pip import Pip
 
 class Update:
     def __init__(self):
@@ -71,6 +72,13 @@ class Update:
         cmd = self.prefix_cmd + "flutter.sh"
         os.system(cmd)
 
+    def pip(self):
+        pip = Pip()
+
+        self.console.print()
+        self.console.print("Updating [bold red]pip[/] packages...")
+        pip.exec_single(self.utils.absolute_location(self.location.PIP + self.location.PIP_FILE), True)
+
     def run(self):
         tasks = {
             0: "All",
@@ -83,7 +91,8 @@ class Update:
             7: "nvm",
             8: "oh-my-tmux",
             9: "Prezto",
-            10: "Flutter"
+            10: "Flutter",
+            11: "pip",
         }
 
         self.console.rule("Update package from?")
@@ -104,6 +113,7 @@ class Update:
             self.tmux()
             self.prezto()
             self.flutter()
+            self.pip()
         elif choice == 1:
             self.homebrew()
         elif choice == 2:
@@ -124,3 +134,5 @@ class Update:
             self.prezto()
         elif choice == 10:
             self.flutter()
+        elif choice == 11:
+            self.pip()
