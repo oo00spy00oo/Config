@@ -22,6 +22,7 @@ class Latest:
             r = requests.get('https://api.github.com/repos/' + code + "/releases/latest")
             response = r.json()
 
+            self.console.print("[magenta]URL[/]: [bold red]" + response["html_url"] + "[/]")
             self.console.print("[magenta]Tag[/]: [bold red]" + response["tag_name"] + "[/]")
             self.console.print("[magenta]Publish date[/]: [bold red]" + response["published_at"] + "[/]")
             self.console.print("[magenta]Release name[/]: [bold red]" + response["name"] + "[/]")
