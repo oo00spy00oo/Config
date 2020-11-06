@@ -119,8 +119,8 @@ class Install:
 
     def gopass(self):
         self.console.print()
-        self.console.print("Installing [bold red]Kubernetes Plugins[/]...")
-        cmd = self.prefix_cmd + "awscli.sh"
+        self.console.print("Installing [bold red]Gopass[/]...")
+        cmd = self.prefix_cmd + "gopass.sh"
         os.system(cmd)
 
     def run(self):
