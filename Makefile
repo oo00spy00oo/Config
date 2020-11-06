@@ -2,7 +2,7 @@ all: homebrew
 
 .PHONY: symlink
 
-symlink: profile-symlink zshrc-symlink oh-my-tmux-symlink nvim-symlink
+symlink: profile-symlink zshrc-symlink oh-my-tmux-symlink nvim-symlink zprezto-symlink
 
 # Symlink
 profile-symlink:
@@ -14,6 +14,10 @@ profile-symlink:
 zshrc-symlink:
 	# Symlink for ZSH
 	cd && ln -s -f .config/zsh-config/.zshrc
+
+zprezto-symlink:
+	# Default mapping from: ${HOME}/.zprezto/runcoms/zpreztorc
+	cd && ln -s -f .config/zsh-config/.zpreztorc
 
 oh-my-tmux-symlink:
 	# https://github.com/gpakosz/.tmux

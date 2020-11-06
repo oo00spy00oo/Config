@@ -30,3 +30,5 @@
   code: free-download-manager
 - name: "Wireshark"
   code: wireshark
+- name: "PGP Suite"
+  code: gpg-suite

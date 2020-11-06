@@ -117,10 +117,10 @@ class Install:
         cmd = self.prefix_cmd + "awscli.sh"
         os.system(cmd)
 
-    def gopass(self):
+    def go(self):
         self.console.print()
-        self.console.print("Installing [bold red]Gopass[/]...")
-        cmd = self.prefix_cmd + "gopass.sh"
+        self.console.print("Installing [bold red]Go[/] packages...")
+        cmd = self.prefix_cmd + "go.sh"
         os.system(cmd)
 
     def run(self):
@@ -133,7 +133,7 @@ class Install:
             5: "pip",
             6: "node",
             7: "awscli",
-            8: "gopass",
+            8: "go",
         }
 
         self.console.rule("Install package from?")
@@ -167,4 +167,4 @@ class Install:
         elif choice == 7:
             self.awscli()
         elif choice == 8:
-            self.gopass()
+            self.go()

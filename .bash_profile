@@ -18,6 +18,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 # ZSH colorize
 export ZSH_COLORIZE_TOOL=chroma
 export ZSH_COLORIZE_STYLE="colorful"
+export ZSH_COLORIZE_CHROMA_FORMATTER=terminal256
 
 # ZSH Tmux
 export ZSH_TMUX_ITERM2=true
@@ -44,7 +45,7 @@ export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'
 export PYTHON_CONFIGURE_OPTS="--enable-framework"
 
 # gvm
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+# [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 # Golang
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
@@ -53,3 +54,9 @@ export PATH="$PATH:${GOBIN}:${GOROOT}/bin"
 
 # Flutter
 export PATH="$PATH:$HOME/development/flutter/bin"
+
+# nvm plugin
+export NVM_LAZY=1
+
+# # autoenv
+# source $(brew --prefix autoenv)/activate.sh

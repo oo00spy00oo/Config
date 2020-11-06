@@ -54,7 +54,15 @@
 - code: transmission-cli
 - code: ccat
 - code: tldr
+- code: emojify
 - code: wireshark
+- code: git-secret
+- code: bash-completion
+- code: gradle-completion
+- code: direnv
+- code: git-flow
+- code: the_silver_searcher
+- code: starship
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap

@@ -79,6 +79,12 @@ class Update:
         self.console.print("Updating [bold red]pip[/] packages...")
         pip.exec_single(self.utils.absolute_location(self.location.PIP + self.location.PIP_FILE), True)
 
+    def go(self):
+        self.console.print()
+        self.console.print("Updating [bold red]go[/] packages...")
+        cmd = self.prefix_cmd + "go.sh"
+        os.system(cmd)
+
     def run(self):
         tasks = {
             0: "All",
@@ -114,6 +120,7 @@ class Update:
             self.prezto()
             self.flutter()
             self.pip()
+            self.go()
         elif choice == 1:
             self.homebrew()
         elif choice == 2:
@@ -136,3 +143,5 @@ class Update:
             self.flutter()
         elif choice == 11:
             self.pip()
+        elif choice == 12:
+            self.go()

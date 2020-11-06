@@ -69,10 +69,12 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    # autoenv
+    autojump
+    colored-man-pages
     git
-    kubectl
+    # kubectl
     docker
-    terraform
     git-flow
     docker-compose
     docker-machine
@@ -81,11 +83,17 @@ plugins=(
     ansible
     osx
     web-search
+    sdk
     tmux
+    thefuck
+    terraform
+    vagrant
+    virtualenv
     zsh-navigation-tools
     zsh-interactive-cd
     zsh_reload
     z
+    frontend-search
     )
 
 source $ZSH/oh-my-zsh.sh
@@ -139,6 +147,8 @@ fi
 if command -v rbenv 1>/dev/null 2>&1; then
   eval "$(rbenv init -)"
 fi
+# Git bash completion
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 # END
 #-----------------------
 
@@ -192,7 +202,35 @@ zinit for \
                 zdharma/history-search-multi-word
 
 # light-mode  zdharma/zbrowse
-zinit light tj/git-extras
+zinit light "tj/git-extras"
+zinit light "chrissicool/zsh-bash"
+zinit light "arzzen/calc.plugin.zsh"
+zinit light "b4b4r07/emoji-cli"
+zinit light "changyuheng/fz"
+zinit light "Aloxaf/fzf-tab"
+zinit light "mafredri/zsh-async"
+zinit light "qoomon/zsh-lazyload"
+zinit light "zpm-zsh/ls"
+zinit light "zpm-zsh/colors"
+zinit light "zpm-zsh/clipboard"
+zinit light "zpm-zsh/material-colors"
+zinit light "zpm-zsh/autoenv"
+zinit light "psprint/zsh-cmd-architect"
+zinit light "psprint/zsh-editing-workbench"
+zinit light "Dabz/kafka-zsh-completions"
+
+zinit light "Dbz/kube-aliases"
+zinit light "supercrabtree/k"
+zinit light "bobthecow/git-flow-completion"
+
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=true
+zinit light "lukechilds/zsh-nvm"
+
+zinit ice atload"zpcdreplay" atclone'./zplug.zsh'
+zinit light g-plane/zsh-yarn-autocompletions
+
+# zinit light "b4b4r07/enhancd"
 
 # For fzf: https://zdharma.org/zinit/wiki/Zinit-Packages/
 zinit pack for fzf
@@ -217,8 +255,11 @@ source ~/.iterm2_shell_integration.zsh
 autoload -U +X bashcompinit && bashcompinit
 
 # Auto jump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+# [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Starship theme
+eval "$(starship init zsh)"
