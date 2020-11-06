@@ -14,7 +14,6 @@
 - code: ripgrep
 - code: telnet
 - code: tmux
-- code: httpie
 - code: you-get
 - code: gh
 - code: bat
@@ -39,7 +38,6 @@
 - code: vault
 - code: tesseract
 - code: tesseract-lang
-- code: grpcurl
 - code: perl
 - code: git
 - code: git-gui
@@ -63,6 +61,8 @@
 - code: git-flow
 - code: the_silver_searcher
 - code: starship
+- code: neofetch
+- code: tty-clock
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap

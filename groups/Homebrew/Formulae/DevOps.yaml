@@ -27,3 +27,7 @@
 - code: teleconsole
 - code: velero
 - code: packer
+- code: hey
+- code: grpcurl
+- code: httpie
+- code: ghz
