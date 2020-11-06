@@ -7,3 +7,4 @@
 - code: kb-manager
 - code: requests
 - code: virtualenv
+- code: jupyter-tabnine

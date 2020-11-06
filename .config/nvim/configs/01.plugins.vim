@@ -31,8 +31,10 @@ Plug 'wlemuel/vim-tldr'
 
 Plug 'tpope/vim-sensible'
 " Plug '/usr/local/opt/fzf'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+
+" commentary.vim: comment stuff out
+Plug 'tpope/vim-commentary'
+
 " lean & mean status/tabline for vim that's light as air
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -40,6 +42,37 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Powerline is a statusline plugin for vim
 " Plug 'powerline/powerline'
 "
+
+" fugitive.vim: A Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-fugitive'
+
+" Autocomplete
+Plug 'zxqfl/tabnine-vim'
+
+" Syntax checking hacks for vim
+Plug 'vim-syntastic/syntastic'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'christoomey/vim-tmux-navigator'
+if has('nvim') || has('patch-8.0.902')
+  Plug 'mhinz/vim-signify'
+else
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
+
+" eunuch.vim: Helpers for UNIX
+Plug 'tpope/vim-eunuch'
+
+" Multiple Plug commands can be written in a single line using | separators
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+
+" emmet for vim: http://emmet.io/
+Plug 'mattn/emmet-vim'
+
+" A Vim plugin which shows git diff markers in the sign column and stages/previews/undoes hunks and partial hunks.
+Plug 'airblade/vim-gitgutter'
+
+Plug 'godlygeek/tabular'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ervandew/supertab'
 Plug 'ryanoasis/vim-devicons'
@@ -55,22 +88,10 @@ Plug 'sjl/clam.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'haya14busa/incsearch-fuzzy.vim'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'christoomey/vim-tmux-navigator'
-if has('nvim') || has('patch-8.0.902')
-  Plug 'mhinz/vim-signify'
-else
-  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
-endif
-
-" Multiple Plug commands can be written in a single line using | separators
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-" emmet for vim: http://emmet.io/
-Plug 'mattn/emmet-vim'
-" A Vim plugin which shows git diff markers in the sign column and stages/previews/undoes hunks and partial hunks.
-Plug 'airblade/vim-gitgutter'
-"
 "### Language
+" Markdown
+Plug 'plasticboy/vim-markdown'
+
 " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
 Plug 'dense-analysis/ale'
 " An autocompletion daemon for the Go programming language
