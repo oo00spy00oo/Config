@@ -36,8 +36,8 @@ class Install:
         choice = int(choice)
 
         if choice == 0:
-            self.homebrew_cask()
             self.homebrew_formulae()
+            self.homebrew_cask()
         elif choice == 1:
             self.homebrew_formulae()
         elif choice == 2:

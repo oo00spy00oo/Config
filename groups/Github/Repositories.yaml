@@ -1,2 +1,3 @@
 - code: "GoogleContainerTools/skaffold"
 - code: "fluxcd/helm-operator"
+- code: "acidanthera/OpenCorePkg"
