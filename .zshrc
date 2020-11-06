@@ -202,6 +202,7 @@ zinit for \
                 zdharma/history-search-multi-word
 
 # light-mode  zdharma/zbrowse
+# zinit light "zpm-zsh/autoenv"
 zinit light "tj/git-extras"
 zinit light "chrissicool/zsh-bash"
 zinit light "arzzen/calc.plugin.zsh"
@@ -214,7 +215,6 @@ zinit light "zpm-zsh/ls"
 zinit light "zpm-zsh/colors"
 zinit light "zpm-zsh/clipboard"
 zinit light "zpm-zsh/material-colors"
-zinit light "zpm-zsh/autoenv"
 zinit light "psprint/zsh-cmd-architect"
 zinit light "psprint/zsh-editing-workbench"
 zinit light "Dabz/kafka-zsh-completions"
