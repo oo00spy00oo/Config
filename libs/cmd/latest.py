@@ -26,4 +26,3 @@ class Latest:
             self.console.print("[green]Tag[/]: [bold magenta]" + response["tag_name"] + "[/]")
             self.console.print("[green]Publish date[/]: [bold magenta]" + response["published_at"] + "[/]")
             self.console.print("[green]Release name[/]: [bold magenta]" + response["name"] + "[/]")
-            self.console.print("[green]Prerelease[/]: [bold magenta]" + str(response["prerelease"]) + "[/]")
