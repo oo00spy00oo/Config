@@ -8,8 +8,6 @@ Plug 'kovisoft/paredit'
 Plug 'junegunn/vader.vim'
 " 🌻 A Vim alignment plugin
 Plug 'junegunn/vim-easy-align'
-" A code-completion engine for Vim
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 " Interactive command execution in Vim.
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " fireplace.vim: Clojure REPL support
@@ -46,14 +44,19 @@ Plug 'ctrlpvim/ctrlp.vim'
 " fugitive.vim: A Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 
-" Autocomplete
-Plug 'zxqfl/tabnine-vim'
 
 " Syntax checking hacks for vim
 Plug 'vim-syntastic/syntastic'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'christoomey/vim-tmux-navigator'
+" Autocomplete section
+" Autocomplete engine for Vim inspried from YouCompleteMe
+Plug 'zxqfl/tabnine-vim'
+" A code-completion engine for Vim
+" Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" End Autocomplete section
+
+" Plug 'christoomey/vim-tmux-navigator'
 if has('nvim') || has('patch-8.0.902')
   Plug 'mhinz/vim-signify'
 else
