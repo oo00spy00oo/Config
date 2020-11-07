@@ -113,7 +113,7 @@ class Install:
 
     def awscli(self):
         self.console.print()
-        self.console.print("Installing [bold red]Kubernetes Plugins[/]...")
+        self.console.print("Installing [bold red]AWS CLI v2[/]...")
         cmd = self.prefix_cmd + "awscli.sh"
         os.system(cmd)
 
@@ -151,7 +151,7 @@ class Install:
             self.pip()
             self.node()
             self.awscli()
-            self.gopass()
+            self.go()
         elif choice == 1:
             self.homebrew()
         elif choice == 2:
