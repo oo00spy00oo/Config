@@ -75,7 +75,7 @@ plugins=(
     git
     # kubectl
     docker
-    git-flow
+    git-flow-avh
     docker-compose
     docker-machine
     colorize
