@@ -229,6 +229,7 @@ zinit light "lukechilds/zsh-nvm"
 
 zinit ice atload"zpcdreplay" atclone'./zplug.zsh'
 zinit light g-plane/zsh-yarn-autocompletions
+# zinit light "marlonrichert/zsh-autocomplete"
 
 # zinit light "b4b4r07/enhancd"
 
