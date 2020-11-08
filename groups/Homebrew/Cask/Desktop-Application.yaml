@@ -34,3 +34,5 @@
   code: gpg-suite
 - name: "Draw.io"
   code: drawio
+- name: "Skitch"
+  code: skitch

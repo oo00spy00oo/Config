@@ -58,7 +58,7 @@
 - code: bash-completion
 - code: gradle-completion
 - code: direnv
-- code: git-flow
+- code: git-flow-avh
 - code: the_silver_searcher
 - code: starship
 - code: neofetch

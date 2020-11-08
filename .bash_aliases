@@ -1,5 +1,6 @@
 # SK Commands
 alias zsh-config='python ~/.config/zsh-config'
+alias zsh-config-upgrade='cd ~/.config/zsh-config && git pull'
 alias sk-symlink='cd ~/.config/zsh-config && make symlink'
 alias sk-kb-export='cd ~/.config/zsh-config/kb && kb export -f cheatsheet'
 alias sk-kb-import='kb import ~/.config/zsh-config/kb/cheatsheet.kb.tar.gz'
