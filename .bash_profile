@@ -54,6 +54,8 @@ export PATH="$PATH:${GOBIN}:${GOROOT}/bin"
 
 # Flutter
 export PATH="$PATH:$HOME/development/flutter/bin"
+# Pub: https://dart.dev/tools/pub/cmd/pub-global
+export PATH="$PATH:$HOME/.pub_cache/bin"
 
 # nvm plugin
 export NVM_LAZY=1
