@@ -2,7 +2,7 @@ all: homebrew
 
 .PHONY: symlink
 
-symlink: profile-symlink zshrc-symlink oh-my-tmux-symlink nvim-symlink zprezto-symlink
+symlink: profile-symlink zshrc-symlink oh-my-tmux-symlink nvim-symlink zprezto-symlink yabai-symlink skhd-symlink
 
 # Symlink
 profile-symlink:
@@ -33,6 +33,16 @@ nvim-symlink:
 	cd ~/.config/nvim && \
 		ln -s -f ${HOME}/.config/zsh-config/.config/nvim/configs && \
 		ln -s -f ${HOME}/.config/zsh-config/.config/nvim/init.vim
+
+yabai-symlink:
+	mkdir -p ${HOME}/.config/yabai
+	cd ~/.config/yabai && \
+		ln -s -f ~/.config/zsh-config/.config/yabai/yabairc
+
+skhd-symlink:
+	mkdir -p ${HOME}/.config/skhd
+	cd ~/.config/skhd && \
+		ln -s -f ~/.config/zsh-config/.config/skhd/skhdrc
 
 prezto-contrib:
 	# https://github.com/belak/prezto-contrib#usage
