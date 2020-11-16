@@ -63,6 +63,8 @@
 - code: starship
 - code: neofetch
 - code: tty-clock
+- code: koekeishiya/formulae/skhd
+- code: koekeishiya/formulae/yabai
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap
