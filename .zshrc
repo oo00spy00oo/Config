@@ -198,8 +198,7 @@ zinit for \
     light-mode  zdharma/zui \
     light-mode  zdharma/zzcomplete \
     light-mode  zdharma/zconvey \
-    light-mode  zdharma/fast-syntax-highlighting \
-                zdharma/history-search-multi-word
+    light-mode  zdharma/history-search-multi-word
 
 # light-mode  zdharma/zbrowse
 # zinit light "zpm-zsh/autoenv"
@@ -254,6 +253,8 @@ source ~/.kb_alias
 source ~/.iterm2_shell_integration.zsh
 
 autoload -U +X bashcompinit && bashcompinit
+
+autoload -U compinit && compinit
 
 # Auto jump
 # [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
