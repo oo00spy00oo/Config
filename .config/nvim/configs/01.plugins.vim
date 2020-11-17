@@ -26,6 +26,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'majutsushi/tagbar'
 " tldr client for vim/neovim
 Plug 'wlemuel/vim-tldr'
+" The Ion Shell. Compatible with Redox and Linux.
+Plug 'vmchale/ion-vim'
 
 Plug 'tpope/vim-sensible'
 " Plug '/usr/local/opt/fzf'

@@ -1,0 +1,5 @@
+- name: Git-Credential-Manager-Core
+  code: git-credential-manager-core
+  tap: microsoft/git
+- name: "Kitty Terminal"
+  code: kitty
