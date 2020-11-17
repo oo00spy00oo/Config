@@ -149,6 +149,8 @@ if command -v rbenv 1>/dev/null 2>&1; then
 fi
 # Git bash completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+# Helm
+source <(helm completion zsh)
 # END
 #-----------------------
 
