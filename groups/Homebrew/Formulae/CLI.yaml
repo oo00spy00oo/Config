@@ -70,3 +70,6 @@
   code: datawire/blackbird/telepresence
   depends:
     - formulae: osxfuse
+- name: gping
+  tap: orf/brew
+  code: gping
