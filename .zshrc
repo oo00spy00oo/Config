@@ -150,7 +150,7 @@ fi
 # Git bash completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 # Helm
-source <(helm completion zsh)
+if [ $commands[helm] ]; then source <(helm completion zsh); fi
 # END
 #-----------------------
 
