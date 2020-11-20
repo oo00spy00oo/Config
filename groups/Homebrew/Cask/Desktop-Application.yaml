@@ -38,3 +38,5 @@
   code: skitch
 - name: "Postman"
   code: postman
+- name: "OpenKey"
+  code: openkey

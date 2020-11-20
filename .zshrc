@@ -151,6 +151,8 @@ fi
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 # Helm
 if [ $commands[helm] ]; then source <(helm completion zsh); fi
+# eksctl
+if [ $commands[eksctl] ]; then fpath=($fpath ~/.zsh/completion); fi
 # END
 #-----------------------
 
