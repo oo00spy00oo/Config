@@ -62,3 +62,6 @@ export NVM_LAZY=1
 
 # # autoenv
 # source $(brew --prefix autoenv)/activate.sh
+
+# CQLSH
+export PATH="$PATH:${HOME}/development/cqlsh-5.1.20/bin"
