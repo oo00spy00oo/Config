@@ -66,6 +66,7 @@
 - code: koekeishiya/formulae/skhd
 - code: koekeishiya/formulae/yabai
 - code: micro
+- code: hey
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap
