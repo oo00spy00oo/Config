@@ -31,3 +31,4 @@
 - code: grpcurl
 - code: httpie
 - code: ghz
+- code: kube-linter
