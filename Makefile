@@ -38,7 +38,7 @@ nvim-symlink:
 yabai-symlink:
 	mkdir -p ${HOME}/.config/yabai
 	cd ~/.config/yabai && \
-	ln -s -f ~/.config/zsh-config/.config/yabai/yabairc
+	ln -s -f ${HOME}/.config/zsh-config/.config/yabai/yabairc
 
 skhd-symlink:
 	mkdir -p ${HOME}/.config/skhd
