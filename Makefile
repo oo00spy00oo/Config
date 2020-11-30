@@ -7,17 +7,17 @@ symlink: profile-symlink zshrc-symlink oh-my-tmux-symlink nvim-symlink zprezto-s
 # Symlink
 profile-symlink:
 	cd && \
-	ln -s -f .config/zsh-config/zsh/.bash_profile && \
-	ln -s -f .config/zsh-config/zsh/alias/.bash_aliases && \
-	ln -s -f .config/zsh-config/zsh/alias/.kb_alias
+		ln -s -f .config/zsh-config/zsh/.bash_profile && \
+		ln -s -f .config/zsh-config/zsh/alias/.bash_aliases && \
+		ln -s -f .config/zsh-config/zsh/alias/.kb_alias
 
 zshrc-symlink:
 	# Symlink for ZSH
-	cd && ln -s -f .config/zsh-config/zsh/.zshrc
+	cd && ln -s -f ${HOME}/.config/zsh-config/zsh/.zshrc
 
 zprezto-symlink:
 	# Default mapping from: ${HOME}/.zprezto/runcoms/zpreztorc
-	cd && ln -s -f .config/zsh-config/zsh/.zpreztorc
+	cd && ln -s -f ${HOME}/.config/zsh-config/zsh/.zpreztorc
 
 oh-my-tmux-symlink:
 	# https://github.com/gpakosz/.tmux
@@ -25,8 +25,8 @@ oh-my-tmux-symlink:
 	git submodule sync
 
 	cd && \
-	ln -s -f .config/zsh-config/.tmux/.tmux.conf && \
-	ln -s -f .config/zsh-config/.tmux/.tmux.conf.local
+	ln -s -f ${HOME}/.config/zsh-config/.tmux/.tmux.conf && \
+	ln -s -f ${HOME}/.config/zsh-config/.tmux/.tmux.conf.local
 
 nvim-symlink:
 	mkdir -p ${HOME}/.config/nvim
@@ -43,7 +43,7 @@ yabai-symlink:
 skhd-symlink:
 	mkdir -p ${HOME}/.config/skhd
 	cd ~/.config/skhd && \
-	ln -s -f ~/.config/zsh-config/.config/skhd/skhdrc
+	ln -s -f ${HOME}/.config/zsh-config/.config/skhd/skhdrc
 
 prezto-contrib:
 	# https://github.com/belak/prezto-contrib#usage
