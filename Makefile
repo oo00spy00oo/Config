@@ -7,9 +7,9 @@ symlink: profile-symlink zshrc-symlink oh-my-tmux-symlink nvim-symlink zprezto-s
 # Symlink
 profile-symlink:
 	cd && \
-		ln -s -f .config/zsh-config/zsh/.bash_profile && \
-		ln -s -f .config/zsh-config/zsh/alias/.bash_aliases && \
-		ln -s -f .config/zsh-config/zsh/alias/.kb_alias
+		ln -s -f ${HOME}/config/zsh-config/zsh/.bash_profile && \
+		ln -s -f ${HOME}/config/zsh-config/zsh/alias/.bash_aliases && \
+		ln -s -f ${HOME}/config/zsh-config/zsh/alias/.kb_alias
 
 zshrc-symlink:
 	# Symlink for ZSH
