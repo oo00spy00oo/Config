@@ -133,6 +133,8 @@ if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 if [ $commands[fly] ]; then source <(fly completion --shell zsh); fi
 # Terraform
 if [ $commands[terraform] ]; then complete -o nospace -C /usr/local/bin/terraform terraform; fi
+# Velero
+if [ $commands[velero] ]; then source <(velero completion zsh); fi
 # nvm (Node version manager)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

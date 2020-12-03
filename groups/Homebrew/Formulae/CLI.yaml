@@ -68,6 +68,7 @@
 - code: micro
 - code: hey
 - code: zsh
+- code: watch
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap
