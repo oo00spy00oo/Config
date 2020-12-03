@@ -65,3 +65,7 @@ export NVM_LAZY=1
 
 # CQLSH
 export PATH="$PATH:${HOME}/development/cqlsh-5.1.20/bin"
+
+# Velero
+alias v=velero
+complete -F __start_velero v
