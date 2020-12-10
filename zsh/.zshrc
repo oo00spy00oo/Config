@@ -133,6 +133,8 @@ if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 if [ $commands[fly] ]; then source <(fly completion --shell zsh); fi
 # Terraform
 if [ $commands[terraform] ]; then complete -o nospace -C /usr/local/bin/terraform terraform; fi
+# Operator Framework
+if [ $commands[operator-sdk] ]; then source <(operator-sdk completion zsh); fi
 # Velero
 if [ $commands[velero] ]; then
     source <(velero completion zsh);
