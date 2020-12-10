@@ -14,7 +14,7 @@
 - code: docker-compose
 - code: helm
 - code: kubectl
-- code: terraform
+# - code: terraform
 - code: terragrunt
 - code: k9s
 - code: buildkit
@@ -33,3 +33,4 @@
 - code: ghz
 - code: kube-linter
 - code: kubespy
+- code: tfenv
