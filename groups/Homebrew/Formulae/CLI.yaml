@@ -70,6 +70,7 @@
 - code: zsh
 - code: watch
 - code: tig
+- code: diff-so-fancy
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap
