@@ -77,6 +77,9 @@ Plug 'mattn/emmet-vim'
 " A Vim plugin which shows git diff markers in the sign column and stages/previews/undoes hunks and partial hunks.
 Plug 'airblade/vim-gitgutter'
 
+" 🔗 The fancy start screen for Vim.
+Plug 'mhinz/vim-startify'
+
 Plug 'godlygeek/tabular'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ervandew/supertab'

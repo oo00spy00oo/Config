@@ -235,6 +235,8 @@ zinit light "Dabz/kafka-zsh-completions"
 zinit light "Dbz/kube-aliases"
 zinit light "supercrabtree/k"
 zinit light "bobthecow/git-flow-completion"
+zinit light "zdharma/zsh-startify"
+zinit light "zdharma/zsh-tig-plugin"
 
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
@@ -276,6 +278,9 @@ autoload -U compinit && compinit
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Add Startify
+zsh-startify
 
 # Starship theme
 eval "$(starship init zsh)"
