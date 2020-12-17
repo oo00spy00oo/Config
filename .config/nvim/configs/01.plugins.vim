@@ -80,6 +80,37 @@ Plug 'airblade/vim-gitgutter'
 " 🔗 The fancy start screen for Vim.
 Plug 'mhinz/vim-startify'
 
+Plug 'rupa/v'
+
+" A Vim plugin which shows git diff markers in the sign column 
+" and stages/previews/undoes hunks and partial hunks.
+Plug 'mhinz/vim-signify'
+
+" A git commit browser in Vim
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
+
+" Switch between single-line and multiline forms of code
+Plug 'AndrewRadev/splitjoin.vim'
+
+" fugitive.vim: A Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-fugitive'
+
+" Vim plugin for insert mode completion of words in adjacent tmux panes
+Plug 'wellle/tmux-complete.vim'
+
+" vinegar.vim: Combine with netrw to create a delicious salad dressing
+Plug 'tpope/vim-vinegar'
+
+" dispatch.vim: Asynchronous build and test dispatcher
+Plug 'tpope/vim-dispatch'
+
+" 🚀 Run Async Shell Commands in Vim 8.0 / NeoVim and Output to the Quickfix Window !! (Vim 中运行异步任务)
+Plug 'skywind3000/asyncrun.vim'
+
+" Search + Browse + Understand your code more efficiently.
+Plug 'devjoe/vim-codequery'
+
 Plug 'godlygeek/tabular'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ervandew/supertab'

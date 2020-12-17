@@ -12,5 +12,8 @@ alias ssh-credify='sh ~/.config/zsh-config/scripts/change-ssh-key.sh credify'
 # Cheat.sh
 alias cht.sh='sh ~/.config/zsh-config/scripts/cht.sh'
 
+alias diff="diff-so-fancy"
+alias l="exa -lahF"
+
 # Lazygit
 alias lg='lazygit'

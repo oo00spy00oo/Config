@@ -30,3 +30,7 @@ let g:webdevicons_enable_airline_statusline = 1
 let g:airline_theme='deus'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
+
+" vim-signify
+" default updatetime 4000ms is not good for async update
+set updatetime=100
