@@ -232,7 +232,7 @@ zinit light "psprint/zsh-cmd-architect"
 zinit light "psprint/zsh-editing-workbench"
 zinit light "Dabz/kafka-zsh-completions"
 
-zinit light "Dbz/kube-aliases"
+# zinit light "Dbz/kube-aliases"
 zinit light "supercrabtree/k"
 zinit light "bobthecow/git-flow-completion"
 zinit light "zdharma/zsh-startify"
@@ -262,7 +262,8 @@ eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 source $HOME/.bash_profile
 source $HOME/.bash_aliases
 source $HOME/.local_profile
-source $HOME/.kb_alias
+[ -f $HOME/.kb_alias ] && source $HOME/.kb_alias
+[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 
 # Add iterm2 shell integration
 # https://iterm2.com/documentation-shell-integration.html
@@ -274,6 +275,9 @@ autoload -U compinit && compinit
 
 # Auto jump
 # [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# Kube-alias: Print the full command before running it
+function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
