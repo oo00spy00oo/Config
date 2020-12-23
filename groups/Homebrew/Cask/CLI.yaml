@@ -3,3 +3,5 @@
   tap: microsoft/git
 - name: "Kitty Terminal"
   code: kitty
+- name: "Edex UI"
+  code: edex-ui
