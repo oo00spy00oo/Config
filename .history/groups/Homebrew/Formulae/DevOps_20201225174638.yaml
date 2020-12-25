@@ -34,4 +34,4 @@
 - code: kube-linter
 - code: kubespy
 - code: tfenv
-- code: aws-sam-cli
+aws-sam-cli
