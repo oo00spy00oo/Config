@@ -71,6 +71,7 @@
 - code: watch
 - code: tig
 - code: diff-so-fancy
+- code: mas
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap
