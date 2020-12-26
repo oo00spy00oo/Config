@@ -35,3 +35,4 @@
 - code: kubespy
 - code: tfenv
 - code: aws-sam-cli
+- code: lazydocker
