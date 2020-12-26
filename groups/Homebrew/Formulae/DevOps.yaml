@@ -36,3 +36,4 @@
 - code: tfenv
 - code: aws-sam-cli
 - code: lazydocker
+- code: docui
