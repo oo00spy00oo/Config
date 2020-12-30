@@ -2,6 +2,7 @@
 - code: pyyaml
 - code: rich
 - code: pip
+- code: buku
 - code: click
 - code: you-get
 - code: git-trend

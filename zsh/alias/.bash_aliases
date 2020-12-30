@@ -17,3 +17,6 @@ alias l="exa -lahF"
 
 # Lazygit
 alias lg='lazygit'
+
+# Buku
+alias b='buku --suggest'
