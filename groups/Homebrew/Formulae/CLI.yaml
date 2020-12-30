@@ -72,6 +72,7 @@
 - code: tig
 - code: diff-so-fancy
 - code: mas
+- code: austinjones/taps/tab
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap
