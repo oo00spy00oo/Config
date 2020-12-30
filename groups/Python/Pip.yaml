@@ -4,6 +4,7 @@
 - code: pip
 - code: click
 - code: you-get
+- code: git-trend
 - code: kb-manager
 - code: requests
 - code: virtualenv
