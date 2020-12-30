@@ -20,3 +20,6 @@ alias lg='lazygit'
 
 # Buku
 alias b='buku --suggest'
+
+# jq
+alias jsontidy="pbpaste | jq '.' | pbcopy"
