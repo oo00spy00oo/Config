@@ -73,6 +73,7 @@
 - code: diff-so-fancy
 - code: mas
 - code: austinjones/taps/tab
+- code: termshark
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap

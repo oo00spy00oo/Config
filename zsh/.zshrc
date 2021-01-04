@@ -237,6 +237,7 @@ zinit light "supercrabtree/k"
 zinit light "bobthecow/git-flow-completion"
 zinit light "zdharma/zsh-startify"
 zinit light "zdharma/zsh-tig-plugin"
+zinit light "jeffreytse/zsh-vi-mode"
 
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
