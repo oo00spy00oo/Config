@@ -74,6 +74,7 @@
 - code: mas
 - code: austinjones/taps/tab
 - code: termshark
+- code: uni
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap
