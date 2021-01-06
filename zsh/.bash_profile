@@ -65,3 +65,11 @@ export NVM_LAZY=1
 
 # CQLSH
 export PATH="$PATH:${HOME}/development/cqlsh-5.1.20/bin"
+
+# PGO
+export PGO_OPERATOR_NAMESPACE=pgo
+export PATH="$HOME/.pgo/$PGO_OPERATOR_NAMESPACE:$PATH"
+export PGOUSER="$HOME/.pgo/$PGO_OPERATOR_NAMESPACE/pgouser"
+export PGO_CA_CERT="$HOME/.pgo/$PGO_OPERATOR_NAMESPACE/client.crt"
+export PGO_CLIENT_CERT="$HOME/.pgo/$PGO_OPERATOR_NAMESPACE/client.crt"
+export PGO_CLIENT_KEY="$HOME/.pgo/$PGO_OPERATOR_NAMESPACE/client.key"
