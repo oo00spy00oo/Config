@@ -75,6 +75,7 @@
 - code: austinjones/taps/tab
 - code: termshark
 - code: uni
+- code: pgloader
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap
