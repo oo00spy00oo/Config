@@ -7,7 +7,7 @@ class Command:
     CASK = "cask"
 
     BREW_CMD = "brew install"
-    BREW_CASK_CMD = "brew cask install"
+    BREW_CASK_CMD = "brew install --cask"
     BREW_TAP_CMD = "brew tap"
 
     PIP_CMD = "pip install"
