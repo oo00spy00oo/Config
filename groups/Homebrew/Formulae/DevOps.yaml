@@ -37,3 +37,4 @@
 - code: aws-sam-cli
 - code: lazydocker
 - code: docui
+- code: kube-ps1

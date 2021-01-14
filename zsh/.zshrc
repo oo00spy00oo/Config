@@ -237,7 +237,7 @@ zinit light "supercrabtree/k"
 zinit light "bobthecow/git-flow-completion"
 zinit light "zdharma/zsh-startify"
 zinit light "zdharma/zsh-tig-plugin"
-zinit light "jeffreytse/zsh-vi-mode"
+# zinit light "jeffreytse/zsh-vi-mode"
 
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
@@ -265,6 +265,10 @@ source $HOME/.bash_aliases
 source $HOME/.local_profile
 [ -f $HOME/.kb_alias ] && source $HOME/.kb_alias
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
+
+# kube-ps1
+[ -f /usr/local/opt/kube-ps1/share/kube-ps1.sh ] && source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
 
 # Add iterm2 shell integration
 # https://iterm2.com/documentation-shell-integration.html

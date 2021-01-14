@@ -1,2 +1,4 @@
 - name: "Fly CLI"
   code: fly
+- name: "kube-forwarder"
+  code: kube-forwarder

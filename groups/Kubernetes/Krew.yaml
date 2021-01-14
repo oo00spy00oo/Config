@@ -1,6 +1,7 @@
 - code: kudo
 - code: warp
 - code: tail
+- code: neat
 - code: sshd
 - code: snap
 - code: score
