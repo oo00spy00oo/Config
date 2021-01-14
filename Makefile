@@ -45,6 +45,10 @@ skhd-symlink:
 	cd ~/.config/skhd && \
 	ln -s -f ${HOME}/.config/zsh-config/.config/skhd/skhdrc
 
+starship:
+	cd ~/.config && \
+	ln -s -f ${HOME}/.config/zsh-config/starship.toml
+
 prezto-contrib:
 	# https://github.com/belak/prezto-contrib#usage
 	cd ${ZPREZTODIR}
