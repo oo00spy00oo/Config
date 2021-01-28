@@ -94,6 +94,7 @@ plugins=(
     zsh_reload
     z
     frontend-search
+	vi-mode
     )
 
 source $ZSH/oh-my-zsh.sh
@@ -261,6 +262,7 @@ eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 
 # Source profiles
 source $HOME/.bash_profile
+source $HOME/.bash_aliases
 source $HOME/.bash_aliases
 source $HOME/.local_profile
 [ -f $HOME/.kb_alias ] && source $HOME/.kb_alias
