@@ -2,7 +2,7 @@ all: homebrew
 
 .PHONY: symlink
 
-symlink: zshrc-symlink oh-my-tmux-symlink nvim-symlink zprezto-symlink yabai-symlink skhd-symlink starship
+symlink: zshrc-symlink oh-my-tmux-symlink zprezto-symlink yabai-symlink skhd-symlink starship
 
 pre-requisites: go colorize tmuxinator-completion
 
@@ -28,13 +28,6 @@ oh-my-tmux-symlink:
 	ln -s -f ${HOME}/.config/zsh-config/.tmux/.tmux.conf && \
 	ln -s -f ${HOME}/.config/zsh-config/.tmux/.tmux.conf.local
 
-nvim-symlink:
-	mkdir -p ${HOME}/.config/nvim
-
-	cd ~/.config/nvim && \
-	ln -s -f ${HOME}/.config/zsh-config/.config/nvim/configs && \
-	ln -s -f ${HOME}/.config/zsh-config/.config/nvim/init.vim
-
 yabai-symlink:
 	mkdir -p ${HOME}/.config/yabai
 	cd ~/.config/yabai && \
@@ -53,6 +46,14 @@ prezto-contrib:
 	# https://github.com/belak/prezto-contrib#usage
 	cd ${ZPREZTODIR}
 	git clone --recurse-submodules https://github.com/belak/prezto-contrib contrib
+
+# Change nvim symlink
+nvim-symlink:
+	mkdir -p ${HOME}/.config/nvim
+
+	cd ~/.config/nvim && \
+	ln -s -f ${HOME}/.config/zsh-config/.config/nvim/configs && \
+	ln -s -f ${HOME}/.config/zsh-config/.config/nvim/init.vim
 
 # Language
 go:
