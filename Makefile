@@ -2,19 +2,18 @@ all: homebrew
 
 .PHONY: symlink
 
-symlink: profile-symlink zshrc-symlink oh-my-tmux-symlink nvim-symlink zprezto-symlink yabai-symlink skhd-symlink
+symlink: zshrc-symlink oh-my-tmux-symlink nvim-symlink zprezto-symlink yabai-symlink skhd-symlink starship
+
+pre-requisites: go colorize tmuxinator-completion
 
 # Symlink
-profile-symlink:
+zsh-symlink:
 	cd && \
+	ln -s -f ${HOME}/.config/zsh-config/zsh/.zshrc && \
 	ln -s -f ${HOME}/.config/zsh-config/zsh/.bash_profile && \
 	ln -s -f ${HOME}/.config/zsh-config/zsh/alias/.bash_aliases && \
 	ln -s -f ${HOME}/.config/zsh-config/zsh/alias/.kb_alias && \
 	ln -s -f ${HOME}/.config/zsh-config/zsh/.zshenv
-
-zshrc-symlink:
-	# Symlink for ZSH
-	cd && ln -s -f ${HOME}/.config/zsh-config/zsh/.zshrc
 
 zprezto-symlink:
 	# Default mapping from: ${HOME}/.zprezto/runcoms/zpreztorc
@@ -66,9 +65,6 @@ colorize:
 	# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colorize
 	# https://github.com/alecthomas/chroma
 	go get -u github.com/alecthomas/chroma/cmd/chroma
-
-kube-linter:
-	GO111MODULE=on go get golang.stackrox.io/kube-linter/cmd/kube-linter
 
 tmuxinator-completion:
 	# https://github.com/tmuxinator/tmuxinator
