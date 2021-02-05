@@ -76,6 +76,8 @@
 - code: termshark
 - code: uni
 - code: pgloader
+- code: pick
+- code: "n"
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap

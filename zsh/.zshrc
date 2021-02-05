@@ -125,9 +125,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#-----------------------
-# Autocomplete section
-# BEGIN
+autoload -U +X bashcompinit && bashcompinit
+autoload -U compinit && compinit
+
+# fzf (auto install via homebrew)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+################################
+### BEGIN Autocomplete ###
+################################
+
 # Kubectl
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 # Fly CLI
@@ -162,8 +169,10 @@ fi
 if [ $commands[helm] ]; then source <(helm completion zsh); fi
 # eksctl
 if [ $commands[eksctl] ]; then fpath=($fpath ~/.zsh/completion); fi
-# END
-#-----------------------
+
+################################
+### END Autocomplete ###
+################################
 
 # Prezto
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -191,11 +200,19 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-## BEGIN Zinit plugins ###
+################################
+### BEGIN Zinit plugins ###
+################################
+
 # THEME
 # zinit light denysdovhan/spaceship-prompt
 
+# Add fzf-tab first
+zinit light Aloxaf/fzf-tab
+
 zinit wait lucid for \
+    hlissner/zsh-autopair \
+    urbainvaes/fzf-marks \
     atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
         zdharma/fast-syntax-highlighting \
     blockf \
@@ -203,68 +220,107 @@ zinit wait lucid for \
     atload"!_zsh_autosuggest_start" \
         zsh-users/zsh-autosuggestions
 
-zinit for \
-    light-mode  zsh-users/zsh-syntax-highlighting \
-    light-mode  zsh-users/zsh-history-substring-search \
-    light-mode  marzocchi/zsh-notify \
-    light-mode  zdharma/zshelldoc \
-    light-mode  zdharma/zui \
-    light-mode  zdharma/zzcomplete \
-    light-mode  zdharma/zconvey \
-    light-mode  zdharma/history-search-multi-word
+zinit lucid for \
+    zsh-users/zsh-syntax-highlighting \
+    zsh-users/zsh-history-substring-search \
+    marzocchi/zsh-notify \
+    zdharma/zshelldoc \
+    zdharma/zui \
+    zdharma/zplugin-crasis \
+    zdharma/zzcomplete \
+    zdharma/zconvey \
+    zdharma/history-search-multi-word
 
-# light-mode  zdharma/zbrowse
-# zinit light "zpm-zsh/autoenv"
-zinit light "tj/git-extras"
-zinit light "chrissicool/zsh-bash"
-zinit light "arzzen/calc.plugin.zsh"
-zinit light "b4b4r07/emoji-cli"
-zinit light "changyuheng/fz"
-zinit light "Aloxaf/fzf-tab"
-zinit light "mafredri/zsh-async"
-zinit light "qoomon/zsh-lazyload"
-zinit light "zpm-zsh/ls"
-zinit light "zpm-zsh/colors"
-zinit light "zpm-zsh/clipboard"
-zinit light "zpm-zsh/material-colors"
-zinit light "zpm-zsh/pr-zcalc"
-zinit light "zpm-zsh/zshmarks"
-zinit light "psprint/zsh-cmd-architect"
-zinit light "psprint/zsh-editing-workbench"
-zinit light "Dabz/kafka-zsh-completions"
+# Git section
+zinit light wfxr/forgit
+zinit light tj/git-extras
+zinit light bobthecow/git-flow-completion
+zinit as"null" wait"2" lucid for \
+    sbin  Fakerr/git-recall \
+    sbin  paulirish/git-open \
+    sbin  paulirish/git-recent \
+    sbin  davidosomething/git-my
 
-# zinit light "Dbz/kube-aliases"
-zinit light "supercrabtree/k"
-zinit light "bobthecow/git-flow-completion"
-zinit light "zdharma/zsh-startify"
-zinit light "zdharma/zsh-tig-plugin"
-# zinit light "jeffreytse/zsh-vi-mode"
+zinit lucid light-mode for \
+    zpm-zsh/ls \
+    chrissicool/zsh-bash \
+    arzzen/calc.plugin.zsh \
+    b4b4r07/emoji-cli \
+    changyuheng/fz \
+    mafredri/zsh-async \
+    qoomon/zsh-lazyload \
+    zpm-zsh/colors \
+    zpm-zsh/clipboard \
+    zpm-zsh/material-colors \
+    zpm-zsh/pr-zcalc \
+    zpm-zsh/zshmarks \
+    psprint/zsh-cmd-architect \
+    psprint/zsh-editing-workbench \
+    supercrabtree/k \
+    zdharma/zsh-tig-plugin \
+    zdharma/declare-zsh \
+    zpm-zsh/colorize \
+    ChrisPenner/copy-pasta \
+    leophys/zsh-plugin-fzf-finder \
+    b4b4r07/enhancd \
+    zdharma/zbrowse \
+    zpm-zsh/autoenv
 
+# httpstat
+zinit ice as"program" cp"httpstat.sh -> httpstat" pick"httpstat"
+zinit light b4b4r07/httpstat
+
+# zsh-fzf-history-search
+zinit ice lucid wait'0'
+zinit light joshskidmore/zsh-fzf-history-search
+
+# Autocompletion
+zinit light g-plane/zsh-yarn-autocompletions
+zinit light Dabz/kafka-zsh-completions
+
+# zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
+#     atpull'%atclone' pick"clrs.zsh" nocompile'!' \
+#     atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
+zinit light trapd00r/LS_COLORS
+
+# Diff-So-Fancy
+zplugin ice as"program" pick"bin/git-dsf"
+zplugin light zdharma/zsh-diff-so-fancy
+
+# nvm
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
-zinit light "lukechilds/zsh-nvm"
-
-zinit ice atload"zpcdreplay" atclone'./zplug.zsh'
-zinit light g-plane/zsh-yarn-autocompletions
-# zinit light "marlonrichert/zsh-autocomplete"
-
-# zinit light "b4b4r07/enhancd"
+zinit light lukechilds/zsh-nvm
 
 # For fzf: https://zdharma.org/zinit/wiki/Zinit-Packages/
 zinit pack for fzf
-### END Zinit plgins ###
+zinit pack for dircolors-material
+zinit pack for ls_colors
 
-# fzf (auto install via homebrew)
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+zplugin pack for @asciidoctor
+zplugin pack for ecs-cli
+zplugin pack for doctoc
+
+# Tmux
+# zinit light zpm-zsh/tmux
+
+# zinit ice atload"zpcdreplay" atclone'./zplug.zsh'
+# zinit light marlonrichert/zsh-autocomplete
+# zinit light Dbz/kube-aliases
+# zinit light zdharma/zsh-startify
+# zinit light jeffreytse/zsh-vi-mode
+
+################################
+### END Zinit plgins ###
+################################
 
 # Perl
-eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+# eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 
 # Source profiles
 source $HOME/.bash_profile
 source $HOME/.bash_aliases
-source $HOME/.bash_aliases
-source $HOME/.local_profile
+[ -f $HOME/.local_profile ] && source $HOME/.local_profile
 [ -f $HOME/.kb_alias ] && source $HOME/.kb_alias
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 
@@ -274,24 +330,22 @@ PS1='$(kube_ps1)'$PS1
 
 # Add iterm2 shell integration
 # https://iterm2.com/documentation-shell-integration.html
-source ~/.iterm2_shell_integration.zsh
-
-autoload -U +X bashcompinit && bashcompinit
-
-autoload -U compinit && compinit
+[ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.zsh
 
 # Auto jump
-# [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # Kube-alias: Print the full command before running it
-function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
+if [ $commands[kubectl] ]; then
+    function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Add Startify
-zsh-startify
+# zsh-startify
 
 # Starship theme
 eval "$(starship init zsh)"

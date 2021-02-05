@@ -2,18 +2,22 @@ all: homebrew
 
 .PHONY: symlink
 
-symlink: zshrc-symlink oh-my-tmux-symlink zprezto-symlink yabai-symlink skhd-symlink starship
+symlink: oh-my-tmux-symlink zprezto-symlink yabai-symlink skhd-symlink starship
 
-pre-requisites: go colorize tmuxinator-completion
+pre-requisites: go colorize sdkman space-vim zinit prezto prezto-contrib update
 
 # Symlink
 zsh-symlink:
 	cd && \
 	ln -s -f ${HOME}/.config/zsh-config/zsh/.zshrc && \
+	ln -s -f ${HOME}/.config/zsh-config/zsh/.zlogin && \
+	ln -s -f ${HOME}/.config/zsh-config/zsh/.zlogout && \
+	ln -s -f ${HOME}/.config/zsh-config/zsh/.zprofile && \
 	ln -s -f ${HOME}/.config/zsh-config/zsh/.bash_profile && \
 	ln -s -f ${HOME}/.config/zsh-config/zsh/alias/.bash_aliases && \
 	ln -s -f ${HOME}/.config/zsh-config/zsh/alias/.kb_alias && \
-	ln -s -f ${HOME}/.config/zsh-config/zsh/.zshenv
+	ln -s -f ${HOME}/.config/zsh-config/zsh/.zshenv && \
+	ln -s -f ${HOME}/.config/zsh-config/zsh/.zshrc
 
 zprezto-symlink:
 	# Default mapping from: ${HOME}/.zprezto/runcoms/zpreztorc
@@ -70,6 +74,24 @@ colorize:
 tmuxinator-completion:
 	# https://github.com/tmuxinator/tmuxinator
 	wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh -O /usr/local/share/zsh/site-functions/_tmuxinator
+
+sdkman:
+	curl -s "https://get.sdkman.io" | bash
+
+prezto:
+	bash scripts/patch/prezto.sh
+
+space-vim:
+	curl -sLf https://spacevim.org/install.sh | bash
+
+zinit:
+	bash scripts/patch/zinit.sh
+
+fzf-completion:
+	bash scripts/patch/fzf.sh
+
+kube-aliases:
+	wget https://raw.githubusercontent.com/ahmetb/kubectl-alias/master/.kubectl_aliases -O ~/.kubectl_aliases
 
 update:
 	# Submodule update from remote
