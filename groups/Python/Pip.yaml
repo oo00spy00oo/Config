@@ -4,6 +4,7 @@
 - code: pip
 - code: buku
 - code: click
+- code: yamllint
 - code: you-get
 - code: aws-shell
 - code: git-trend
