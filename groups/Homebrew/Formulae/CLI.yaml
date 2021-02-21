@@ -78,7 +78,6 @@
 - code: pgloader
 - code: pick
 - code: "n"
-- code: tektoncd-cli
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap
