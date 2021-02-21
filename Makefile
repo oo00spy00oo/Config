@@ -93,6 +93,10 @@ fzf-completion:
 kube-aliases:
 	wget https://raw.githubusercontent.com/ahmetb/kubectl-alias/master/.kubectl_aliases -O ~/.kubectl_aliases
 
+autocompletion:
+	# Tmuxinator
+	wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh -O /usr/local/share/zsh/site-functions/_tmuxinator
+
 update:
 	# Submodule update from remote
 	git submodule update --remote --merge
