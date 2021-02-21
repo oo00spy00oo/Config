@@ -11,3 +11,6 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
 fi
 
 source "$HOME/.cargo/env"
+
+# fzf
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
