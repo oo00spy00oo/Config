@@ -2,6 +2,5 @@
 format = 'on [⛵ $context \($namespace\)](dimmed green) '
 disabled = false
 [kubernetes.context_aliases]
-"vinh@credify-dev.ap-southeast-1.eksctl.io" = "credify-dev"
-"vinh@credify-prod.ap-southeast-1.eksctl.io" = "credify-prod"
-"vinh@credify-service.ap-southeast-1.eksctl.io" = "credify-service"
+"vs@vs-devops.ap-southeast-1.eksctl.io" = "vs-devops"
+"vs@vs-service.ap-southeast-1.eksctl.io" = "vs-servic3"
