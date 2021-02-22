@@ -149,6 +149,8 @@ if [ $commands[velero] ]; then
     alias v=velero
     complete -F __start_velero v
 fi
+# FluxCD
+if [ $commands[flux] ]; then source <(flux completion zsh); fi
 # nvm (Node version manager)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
