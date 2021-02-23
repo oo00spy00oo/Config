@@ -39,6 +39,7 @@
 - code: docui
 - code: kube-ps1
 - code: jsonnet
+- code: argocd
 - name: "AWS SAM CLI"
   tap: aws/tap
   code: aws-sam-cli
