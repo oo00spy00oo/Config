@@ -46,3 +46,5 @@
   code: "transmission"
 - name: "Hyper Terminal"
   code: hyper
+- name: "GraphQL Playground"
+  code: graphql-playground

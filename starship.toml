@@ -3,4 +3,4 @@ format = 'on [⛵ $context \($namespace\)](dimmed green) '
 disabled = false
 [kubernetes.context_aliases]
 "vs@vs-devops.ap-southeast-1.eksctl.io" = "vs-devops"
-"vs@vs-service.ap-southeast-1.eksctl.io" = "vs-servic3"
+"vs@vs-service.ap-southeast-1.eksctl.io" = "vs-service"
