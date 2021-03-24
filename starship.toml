@@ -4,3 +4,4 @@ disabled = false
 [kubernetes.context_aliases]
 "vs@vs-devops.ap-southeast-1.eksctl.io" = "vs-devops"
 "vs@vs-service.ap-southeast-1.eksctl.io" = "vs-service"
+"vs@vs-prod.ap-southeast-1.eksctl.io" = "vs-prod"

@@ -78,6 +78,7 @@
 - code: pgloader
 - code: pick
 - code: "n"
+- code: wtfutil
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap
