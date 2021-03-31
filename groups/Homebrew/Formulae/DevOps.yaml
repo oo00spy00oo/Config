@@ -40,6 +40,7 @@
 - code: kube-ps1
 - code: jsonnet
 - code: argocd
+- code: skopeo
 - name: "AWS SAM CLI"
   tap: aws/tap
   code: aws-sam-cli
