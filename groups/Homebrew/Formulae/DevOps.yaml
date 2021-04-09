@@ -41,6 +41,7 @@
 - code: jsonnet
 - code: argocd
 - code: skopeo
+- code: lnav
 - name: "AWS SAM CLI"
   tap: aws/tap
   code: aws-sam-cli
