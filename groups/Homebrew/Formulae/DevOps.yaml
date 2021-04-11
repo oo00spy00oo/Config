@@ -42,6 +42,7 @@
 - code: argocd
 - code: skopeo
 - code: lnav
+- code: mitmproxy
 - name: "AWS SAM CLI"
   tap: aws/tap
   code: aws-sam-cli
