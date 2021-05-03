@@ -43,6 +43,7 @@
 - code: skopeo
 - code: lnav
 - code: mitmproxy
+- code: helmfile
 - name: "AWS SAM CLI"
   tap: aws/tap
   code: aws-sam-cli
