@@ -80,6 +80,7 @@
 - code: "n"
 - code: fuse
 - code: wtfutil
+- code: watchman
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap
