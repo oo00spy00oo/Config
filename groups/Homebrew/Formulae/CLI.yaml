@@ -88,6 +88,12 @@
   code: datawire/blackbird/telepresence
   depends:
     - formulae: osxfuse
+- name: asdf
+  code: asdf
+  depends:
+    - formulae: coreutils
+    - formulae: curl
+    - formulae: git
 - name: gping
   tap: orf/brew
   code: gping
