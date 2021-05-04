@@ -342,6 +342,9 @@ if [ $commands[kubectl] ]; then
     function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
 fi
 
+# asdf
+. /usr/local/opt/asdf/asdf.sh
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
