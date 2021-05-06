@@ -48,3 +48,5 @@
   code: hyper
 - name: "GraphQL Playground"
   code: graphql-playground
+- name: "OSX FUSE"
+  code: macfuse
