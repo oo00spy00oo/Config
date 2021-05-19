@@ -78,3 +78,6 @@ export PGO_NAMESPACE=pgo
 
 # Cargo
 source "$HOME/.cargo/env"
+
+# Linkerd
+export PATH=$PATH:$HOME/.linkerd2/bin

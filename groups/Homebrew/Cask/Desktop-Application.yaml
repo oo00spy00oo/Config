@@ -42,5 +42,13 @@
   code: openkey
 - name: "Monitor Control"
   code: monitorcontrol
+- name: "Transmission"
+  code: "transmission"
+- name: "Hyper Terminal"
+  code: hyper
+- name: "GraphQL Playground"
+  code: graphql-playground
+- name: "OSX FUSE"
+  code: macfuse
 - name: "Source Trail"
   code: sourcetrail

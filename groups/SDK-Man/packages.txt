@@ -1,6 +1,6 @@
-java 20.2.0.r11-grl
-java 15.0.1.hs-adpt
-java 11.0.9.hs-adpt
+java 21.0.0.r11-grl
+java 15.0.2.hs-adpt
+java 11.0.10.hs-adpt
 gradle
 gradleprofiler
 micronaut
