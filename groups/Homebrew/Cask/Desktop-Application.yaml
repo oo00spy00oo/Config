@@ -42,3 +42,5 @@
   code: openkey
 - name: "Monitor Control"
   code: monitorcontrol
+- name: "Source Trail"
+  code: sourcetrail
