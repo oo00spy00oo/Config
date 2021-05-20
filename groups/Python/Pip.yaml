@@ -12,3 +12,4 @@
 - code: requests
 - code: virtualenv
 - code: jupyter-tabnine
+- code: sqlfluff
