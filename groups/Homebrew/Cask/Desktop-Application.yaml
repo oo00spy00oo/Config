@@ -52,3 +52,5 @@
   code: macfuse
 - name: "Source Trail"
   code: sourcetrail
+- name: "Image Optim"
+  code: imageoptim
