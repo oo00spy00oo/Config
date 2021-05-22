@@ -352,5 +352,8 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # Add Startify
 # zsh-startify
 
+# mozjpeg
+export PATH="/usr/local/opt/mozjpeg/bin:$PATH"
+
 # Starship theme
 eval "$(starship init zsh)"
