@@ -82,6 +82,7 @@
 - code: wtfutil
 - code: watchman
 - code: imagemagick
+- code: xh
 - name: Git toolbelt
   code: nvie/tap/git-toolbelt
   tap: nvie/tap
