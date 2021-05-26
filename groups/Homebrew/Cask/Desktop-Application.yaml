@@ -54,3 +54,5 @@
   code: sourcetrail
 - name: "Image Optim"
   code: imageoptim
+- name: "Tor Browser"
+  code: tor-browser
