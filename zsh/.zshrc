@@ -266,7 +266,8 @@ zinit lucid light-mode for \
     leophys/zsh-plugin-fzf-finder \
     b4b4r07/enhancd \
     zdharma/zbrowse \
-    zpm-zsh/autoenv
+    zpm-zsh/autoenv \
+    mbhynes/fzf-gcloud
 
 # httpstat
 zinit ice as"program" cp"httpstat.sh -> httpstat" pick"httpstat"
