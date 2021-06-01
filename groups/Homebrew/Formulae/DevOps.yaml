@@ -44,6 +44,7 @@
 - code: lnav
 - code: mitmproxy
 - code: helmfile
+- code: octant
 - name: "AWS SAM CLI"
   tap: aws/tap
   code: aws-sam-cli
